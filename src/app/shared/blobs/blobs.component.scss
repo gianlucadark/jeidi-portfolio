@@ -1,0 +1,42 @@
+.blobs-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.blob-full {
+  position: absolute;
+  left: -10%; top: -20%;
+  width: 120%; height: 200%;
+  border-radius: 50%;
+  background: var(--blob-blue);
+  opacity: 0.55;
+  filter: blur(80px);
+}
+.blob-brown {
+  position: absolute;
+  left: 45%; top: -30%;
+  width: 50vw; height: 70vw;
+  max-width: 900px; max-height: 1200px;
+  border-radius: 50%;
+  background: var(--blob-brown);
+  opacity: 0.45;
+  filter: blur(120px);
+  transform: rotate(34deg);
+  transition: transform 1.2s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.blob-blue {
+  position: absolute;
+  left: -5%; top: 10%;
+  width: 50vw; height: 70vw;
+  max-width: 900px; max-height: 1200px;
+  border-radius: 50%;
+  background: var(--blob-blue);
+  opacity: 0.45;
+  filter: blur(120px);
+  transform: rotate(34deg);
+  transition: transform 1.2s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}

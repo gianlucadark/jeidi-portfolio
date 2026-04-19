@@ -1,0 +1,46 @@
+.page {
+  position: relative;
+  background: var(--bg-pale);
+  overflow: hidden;
+}
+.photo-section {
+  position: relative;
+  z-index: 2;
+  padding: 180px 60px 60px;
+}
+.photo-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.photo-title {
+  font-family: Lato;
+  font-weight: 100;
+  font-size: min(11vw, 180px);
+  color: var(--white);
+  line-height: 1;
+}
+.photo-subtitle {
+  margin-top: 20px;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--white);
+  letter-spacing: .2em;
+}
+.masonry {
+  columns: 3 400px;
+  column-gap: 24px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.photo-item {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: none;
+}
+img {
+  width: 100%;
+  display: block;
+}

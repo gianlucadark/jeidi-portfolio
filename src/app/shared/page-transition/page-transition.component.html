@@ -1,0 +1,6 @@
+<div class="overlay"
+  [class.phase-out]="phase() === 'out'"
+  [class.phase-in]="phase() === 'in'"
+  [class.phase-idle]="phase() === 'idle'">
+  <div class="jc-label" [class.visible]="phase() === 'out'">JC</div>
+</div>

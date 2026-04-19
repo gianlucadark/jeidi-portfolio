@@ -1,0 +1,20 @@
+<div class="mobile-header">
+  <button class="logo-btn" (click)="navService.navigate('home')">
+    <app-logo [size]="34" [color]="textColor()"/>
+  </button>
+  <button class="hamburger" (click)="open.set(!open())">
+    <span [style.width]="open() ? '20px' : '16px'"></span>
+    <span style="width:20px"></span>
+  </button>
+</div>
+<div class="overlay" [class.open]="open()">
+  @for (item of items; track item.id; let i = $index) {
+    <button
+      class="overlay-item"
+      [class.item-visible]="open()"
+      [style.transition-delay]="(0.2 + i * 0.08) + 's'"
+      (click)="go(item.id)">
+      {{ item.label }}
+    </button>
+  }
+</div>

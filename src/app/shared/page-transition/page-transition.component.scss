@@ -1,0 +1,36 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--black);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.overlay.phase-out {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform .6s cubic-bezier(.77,0,.18,1);
+}
+.overlay.phase-in {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .6s cubic-bezier(.77,0,.18,1);
+}
+.overlay.phase-idle {
+  transform: scaleY(0);
+  transition: none;
+}
+.jc-label {
+  color: white;
+  font-family: Lato;
+  font-weight: 100;
+  font-size: 96px;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.jc-label.visible { opacity: 1; }

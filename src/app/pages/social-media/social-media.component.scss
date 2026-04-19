@@ -1,0 +1,9 @@
+.page { position: relative; background: var(--bg-blue); overflow: hidden; }
+.section { position: relative; z-index: 2; padding: 200px 136px 100px; }
+.inner { max-width: 1647px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
+.page-title {
+  font-family: Lato; font-weight: 100;
+  font-size: min(9vw, 140px); line-height: 1;
+  color: var(--black); margin: 0; letter-spacing: -0.01em;
+}
+@media (max-width: 900px) { .section { padding: 100px 30px 60px; } }

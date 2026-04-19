@@ -1,0 +1,35 @@
+<div class="page">
+  <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+  <app-corner-logo/>
+  <section class="contact-section">
+    <div class="contact-grid">
+      @for (item of contacts; track item.type) {
+        <a [href]="item.href" class="contact-item" data-hover="circle" target="_blank">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="var(--ink)" stroke-width="1.6">
+            @switch (item.type) {
+              @case ('mail') {
+                <rect x="3" y="7" width="26" height="18" rx="2"/>
+                <path d="M3 9l13 9 13-9"/>
+              }
+              @case ('phone') {
+                <path d="M6 4 h5 l2 6 l-3 2 a14 14 0 0 0 10 10 l2 -3 l6 2 v5 a2 2 0 0 1 -2 2 A22 22 0 0 1 4 6 a2 2 0 0 1 2 -2 z"/>
+              }
+              @case ('linkedin') {
+                <rect x="4" y="4" width="24" height="24" rx="3"/>
+                <rect x="8" y="13" width="3" height="10" fill="var(--ink)"/>
+                <circle cx="9.5" cy="9.5" r="1.5" fill="var(--ink)"/>
+                <path d="M15 13 v10 M15 17 a3 3 0 0 1 6 0 v6"/>
+              }
+              @case ('instagram') {
+                <rect x="4" y="4" width="24" height="24" rx="6"/>
+                <circle cx="16" cy="16" r="5"/>
+                <circle cx="23" cy="9" r="1" fill="var(--ink)"/>
+              }
+            }
+          </svg>
+          <span class="contact-label">{{ item.label }}</span>
+        </a>
+      }
+    </div>
+  </section>
+</div>

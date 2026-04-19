@@ -1,0 +1,10 @@
+@if (mode() !== 'none') {
+  <div class="blobs-container">
+    @if (mode() === 'full') {
+      <div class="blob-full"></div>
+    } @else {
+      <div class="blob-brown" [style.transform]="brownTransform()"></div>
+      <div class="blob-blue" [style.transform]="blueTransform()"></div>
+    }
+  </div>
+}

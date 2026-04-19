@@ -1,0 +1,25 @@
+.nav {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  padding: 4px;
+  border-radius: 37px;
+  z-index: 50;
+  align-items: center;
+}
+button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 37px;
+  padding: 8px 18px;
+  font-family: Lato, system-ui;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1;
+  cursor: none;
+  transition: border-color .3s ease, color .3s ease;
+  white-space: nowrap;
+}

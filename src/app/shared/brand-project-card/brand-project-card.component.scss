@@ -1,0 +1,45 @@
+.card-wrapper {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.card-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: none;
+  width: 100%;
+  text-align: left;
+}
+.card-image {
+  width: 100%;
+  aspect-ratio: 1647/824;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.card-info {
+  margin-top: 40px;
+  padding: 0 10%;
+  text-align: center;
+}
+.card-title {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: min(6.7vw, 128px);
+  line-height: 1;
+  color: var(--ink);
+}
+.card-desc {
+  margin-top: 16px;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: min(1.66vw, 32px);
+  line-height: 1.2;
+  color: var(--ink);
+}

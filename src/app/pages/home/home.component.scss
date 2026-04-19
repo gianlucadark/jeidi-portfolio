@@ -1,0 +1,105 @@
+.page { position: relative; }
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-pale);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-logo {
+  position: absolute;
+  left: 60px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.hero-content {
+  padding: 0 60px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.big-title {
+  font-family: Lato, system-ui;
+  font-weight: 100;
+  font-size: min(9vw, 140px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  white-space: nowrap;
+}
+.line {
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+.line span {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+.scroll-arrow {
+  position: absolute;
+  bottom: 60px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.work-section {
+  position: relative;
+  background: var(--bg-blue);
+  padding: 180px 60px 140px;
+  overflow: hidden;
+}
+.work-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.section-title {
+  font-family: Lato;
+  font-weight: 100;
+  font-size: min(8vw, 140px);
+  line-height: 1;
+  margin-bottom: 100px;
+}
+.dot { color: var(--blob-brown); }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+.project-card {
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: none;
+  text-align: left;
+  display: block;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 24px;
+  gap: 40px;
+}
+.card-title {
+  font-family: Lato;
+  font-weight: 100;
+  font-size: min(4vw, 64px);
+  line-height: 1;
+  color: var(--black);
+}
+.card-kind {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .big-title { font-size: min(12vw, 140px); white-space: normal; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { grid-column: span 1 !important; }
+  .card-kind { font-size: 14px; }
+}

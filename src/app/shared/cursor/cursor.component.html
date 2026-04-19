@@ -1,0 +1,9 @@
+<div #ring class="cursor-ring"
+  [class.pressed]="mouseDown()"
+  [style.width.px]="ringSize()"
+  [style.height.px]="ringSize()">
+  @if (hoverTarget() === 'image') {
+    <span class="view-label">VIEW</span>
+  }
+</div>
+<div #dot class="cursor-dot"></div>

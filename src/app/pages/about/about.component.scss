@@ -1,0 +1,58 @@
+.page {
+  position: relative;
+  background: var(--bg-pale);
+  overflow: hidden;
+}
+.bio-section {
+  position: relative;
+  min-height: 100vh;
+  z-index: 2;
+  padding: 200px 120px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.big-title {
+  font-family: Lato, system-ui;
+  font-weight: 100;
+  font-size: min(9vw, 140px);
+  line-height: 1;
+  color: var(--black);
+  margin: 0;
+  letter-spacing: -0.01em;
+  max-width: 980px;
+}
+.bio-text {
+  margin-top: 80px;
+  max-width: 940px;
+  text-align: right;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: min(1.7vw, 32px);
+  line-height: 1.35;
+  color: var(--ink);
+}
+.philosophy-section {
+  position: relative;
+  z-index: 2;
+  padding: 120px 120px 200px;
+  text-align: center;
+}
+.philosophy-title {
+  font-family: Lato, system-ui;
+  font-weight: 100;
+  font-size: min(9vw, 140px);
+  line-height: 1;
+  color: var(--black);
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .bio-section { padding: 120px 30px 60px; align-items: flex-start; text-align: left; }
+  .big-title { font-size: min(14vw, 100px); }
+  .bio-text { text-align: left; font-size: 18px; }
+  .philosophy-section { padding: 60px 30px 100px; }
+  .philosophy-title { font-size: min(12vw, 80px); }
+}

@@ -1,0 +1,56 @@
+<div class="page">
+  <!-- Hero -->
+  <div class="hero">
+    <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+    <app-logo [size]="74" class="hero-logo hide-mobile"/>
+    <div class="hero-content">
+      <div class="big-title">
+        <div class="line">
+          @for (word of line1; track $index; let i = $index) {
+            <span [style.transform]="mounted() ? 'translateY(0)' : 'translateY(110%)'"
+              [style.transition]="'transform 1.1s ' + (0.1 + i * 0.08) + 's cubic-bezier(.2,.8,.2,1)'">
+              {{ word }}
+            </span>
+          }
+        </div>
+        <div class="line">
+          @for (word of line2; track $index; let i = $index) {
+            <span [style.transform]="mounted() ? 'translateY(0)' : 'translateY(110%)'"
+              [style.transition]="'transform 1.1s ' + (0.4 + i * 0.08) + 's cubic-bezier(.2,.8,.2,1)'">
+              {{ word }}
+            </span>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="scroll-arrow">
+      <app-circle-arrow direction="down" (clicked)="scrollDown()"/>
+    </div>
+  </div>
+
+  <!-- Selected Work -->
+  <section class="work-section">
+    <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+    <div class="work-inner">
+      <div class="section-title">
+        Selected work<span class="dot">.</span>
+      </div>
+      <div class="projects-grid">
+        @for (project of projects; track project.id; let i = $index) {
+          <button class="project-card"
+            [style.grid-column]="spans[i]"
+            data-hover="image"
+            (click)="nav.navigate(project.id)">
+            <app-reveal-image [src]="project.img" aspect="16/10"/>
+            <div class="card-meta">
+              <div class="card-title">{{ project.title }}</div>
+              <div class="card-kind">{{ numLabel(i) }} — {{ project.kind }}</div>
+            </div>
+          </button>
+        }
+      </div>
+    </div>
+  </section>
+
+  <app-footer/>
+</div>

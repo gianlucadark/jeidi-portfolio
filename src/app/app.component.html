@@ -1,0 +1,11 @@
+<app-cursor class="hide-mobile"/>
+<app-page-transition [phase]="navService.phase()"/>
+<div class="hide-mobile">
+  <app-nav [textColor]="navColor()"/>
+</div>
+<div class="show-mobile">
+  <app-mobile-nav [textColor]="navColor()"/>
+</div>
+<main>
+  <router-outlet/>
+</main>

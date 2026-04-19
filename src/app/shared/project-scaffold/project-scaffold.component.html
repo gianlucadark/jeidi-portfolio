@@ -1,0 +1,19 @@
+<div class="page">
+  <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+  <app-corner-logo/>
+  <section class="section">
+    <div class="inner">
+      <app-circle-arrow direction="left" (clicked)="nav.navigate(back())"/>
+      <h1 class="page-title">{{ title() }}</h1>
+      @if (hero()) {
+        <app-reveal-image [src]="hero()" aspect="1647/824"/>
+      }
+      <div class="project-info">
+        <h2 class="subtitle">{{ subtitle() }}</h2>
+        <p class="body-text">{{ body() }}</p>
+      </div>
+      <app-project-grid [images]="grid()"/>
+    </div>
+  </section>
+  <app-footer/>
+</div>

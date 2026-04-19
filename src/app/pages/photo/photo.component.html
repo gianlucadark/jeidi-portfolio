@@ -1,0 +1,18 @@
+<div class="page">
+  <app-blobs mode="full"/>
+  <app-corner-logo color="var(--white)"/>
+  <section class="photo-section">
+    <div class="photo-header">
+      <div class="photo-title">Photography</div>
+      <div class="photo-subtitle">EVENTS · FASHION · PORTRAITS</div>
+    </div>
+    <div class="masonry">
+      @for (photo of photos; track $index) {
+        <div class="photo-item" data-hover="image">
+          <img [src]="photo" alt=""/>
+        </div>
+      }
+    </div>
+  </section>
+  <app-footer/>
+</div>

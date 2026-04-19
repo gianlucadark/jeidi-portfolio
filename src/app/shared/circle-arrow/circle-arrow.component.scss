@@ -1,0 +1,15 @@
+.circle-arrow {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: background .4s ease;
+}
+svg {
+  display: block;
+  transition: transform .4s;
+}

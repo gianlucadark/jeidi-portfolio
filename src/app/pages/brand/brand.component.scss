@@ -1,0 +1,22 @@
+.page { position: relative; background: var(--bg-blue); overflow: hidden; }
+.section { position: relative; z-index: 2; padding: 200px 136px 120px; }
+.inner { max-width: 1647px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
+.sub-panels { display: grid; grid-template-columns: 1fr 1fr; min-height: 60vh; }
+.sub-panel {
+  border: none; padding: 0; cursor: none;
+  position: relative; min-height: 60vh;
+  background-size: cover; background-position: center;
+}
+.sub-panel span {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: Lato; font-size: min(3.5vw, 48px);
+  color: rgb(240,240,240);
+  transition: letter-spacing .6s ease;
+}
+.sub-panel:hover span { letter-spacing: .08em; }
+@media (max-width: 900px) {
+  .section { padding: 100px 30px 60px; }
+  .sub-panels { grid-template-columns: 1fr; }
+  .sub-panel { min-height: 40vh; }
+}

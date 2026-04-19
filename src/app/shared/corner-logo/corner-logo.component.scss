@@ -1,0 +1,14 @@
+.corner-logo {
+  position: fixed;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: none;
+  padding: 0;
+  z-index: 40;
+}
+@media (max-width: 900px) {
+  .corner-logo { display: none; }
+}

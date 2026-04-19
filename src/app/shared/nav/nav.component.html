@@ -1,0 +1,12 @@
+<nav class="nav">
+  @for (item of items; track item.id) {
+    <button
+      data-hover="nav"
+      [class.active]="isActive(item.path)"
+      [style.color]="textColor()"
+      [style.border-color]="isActive(item.path) ? textColor() : 'transparent'"
+      (click)="nav.navigate(item.id)">
+      {{ item.label }}
+    </button>
+  }
+</nav>

@@ -1,0 +1,7 @@
+<div class="logo" [style.width.px]="size()" [style.height.px]="height()">
+  @for (i of [0,1,2]; track i) {
+    <svg [attr.width]="chevronW()" [attr.height]="height()" viewBox="0 0 26 52" fill="none">
+      <path d="M 24 2 L 2 26 L 24 50" [attr.stroke]="color()" stroke-width="1.6" fill="none"/>
+    </svg>
+  }
+</div>
