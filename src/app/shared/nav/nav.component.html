@@ -4,7 +4,6 @@
       data-hover="nav"
       [class.active]="isActive(item.path)"
       [style.color]="textColor()"
-      [style.border-color]="isActive(item.path) ? textColor() : 'transparent'"
       (click)="nav.navigate(item.id)">
       {{ item.label }}
     </button>

@@ -4,8 +4,8 @@ import { NavigationService } from '../../services/navigation.service';
 
 const PANELS = [
   { id: 'uxui',        label: 'UX/UI Design',             img: 'brand-uxui.jpg' },
-  { id: 'brand',       label: 'Brand and Visual Identity', img: 'brand-social.jpg' },
-  { id: 'socialmedia', label: 'Social media design',       img: 'circus-4.jpg' },
+  { id: 'brand',       label: 'Brand and Visual Identity', img: 'ideate-1.jpg' },
+  { id: 'socialmedia', label: 'Social media design',       img: 'brand-social.jpg' },
 ];
 
 @Component({

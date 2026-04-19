@@ -22,7 +22,7 @@ const SPANS = ['span 7', 'span 5', 'span 5', 'span 7', 'span 6', 'span 6'];
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BlobsComponent, LogoComponent, CircleArrowComponent, RevealImageComponent, FooterComponent],
+  imports: [BlobsComponent, CircleArrowComponent, RevealImageComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

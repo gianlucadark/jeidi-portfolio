@@ -4,22 +4,37 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 20px;
-  padding: 4px;
-  border-radius: 37px;
-  z-index: 50;
+  gap: 32px;
+  z-index: 100;
   align-items: center;
 }
 button {
+  position: relative;
   background: transparent;
-  border: 1px solid transparent;
-  border-radius: 37px;
-  padding: 8px 18px;
+  border: none;
+  padding: 8px 4px;
   font-family: Lato, system-ui;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   cursor: none;
-  transition: border-color .3s ease, color .3s ease;
+  transition: color .3s ease;
   white-space: nowrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    right: 4px;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    transform-origin: center;
+  }
+
+  &.active::after {
+    transform: scaleX(1);
+  }
 }
