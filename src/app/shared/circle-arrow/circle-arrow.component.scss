@@ -6,8 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
+  cursor: pointer;
+  touch-action: manipulation;
   transition: background .4s ease;
+}
+@media (pointer: fine) {
+  .circle-arrow { cursor: none; }
 }
 svg {
   display: block;

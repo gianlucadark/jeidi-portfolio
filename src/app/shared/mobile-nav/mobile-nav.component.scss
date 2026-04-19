@@ -11,17 +11,21 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  touch-action: manipulation;
 }
 .hamburger {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
-  width: 24px; height: 24px;
+  padding: 8px;
+  margin: -8px;
+  width: 40px; height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
   gap: 5px;
+  touch-action: manipulation;
 }
 .hamburger span {
   display: block;
@@ -54,7 +58,9 @@
   font-size: min(14vw, 72px);
   color: var(--black);
   cursor: pointer;
+  touch-action: manipulation;
   line-height: 1;
+  padding: 8px 0;
   transform: translateY(40px);
   opacity: 0;
   transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s;

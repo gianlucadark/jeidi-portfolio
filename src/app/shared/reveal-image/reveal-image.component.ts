@@ -24,7 +24,7 @@ export class RevealImageComponent implements OnInit {
         this.visible.set(true);
         io.disconnect();
       }
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05, rootMargin: '100px' });
     io.observe(this.el.nativeElement);
   }
 }

@@ -52,7 +52,11 @@ footer {
   color: var(--black);
 }
 @media (max-width: 700px) {
-  .top-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px; min-height: unset; }
+  .top-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact-left, .contact-center, .contact-right { font-size: 16px; }
   .contact-center, .contact-right { text-align: left; }
   .social-row { justify-content: flex-start; }
+  .name-row { margin-top: 48px; }
+  .name-big { font-size: min(14vw, 100px); }
 }
