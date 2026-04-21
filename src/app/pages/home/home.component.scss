@@ -1,4 +1,4 @@
-.page { position: relative; }
+.page { position: relative; overflow-x: clip; }
 .hero {
   position: relative;
   min-height: 100vh;
@@ -39,34 +39,143 @@
 }
 .scroll-arrow {
   position: absolute;
-  bottom: 60px; left: 50%;
+  bottom: 20px; left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 }
+.services-section {
+  position: relative;
+  background: #DEE4F0;
+  min-height: 100vh;
+  padding: 120px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #F0F0F0;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  right: -112px;
+  top: -89px;
+  bottom: -767px;
+  background: #404F80;
+  filter: blur(250px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.services-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1466px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.services-title {
+  font-family: Lato, system-ui;
+  font-weight: 275;
+  font-size: min(7.3vw, 140px);
+  line-height: 1.2;
+  color: #F0F0F0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.services-subtitle {
+  font-family: Lato, system-ui;
+  font-weight: 275;
+  font-size: min(3.3vw, 64px);
+  line-height: 1.2;
+  color: #F0F0F0;
+  margin: 0;
+  max-width: 1091px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.service-item h3 {
+  font-family: Lato, system-ui;
+  font-weight: 400;
+  font-size: min(1.9vw, 36px);
+  line-height: 1.2;
+  color: #F0F0F0;
+  margin: 0;
+}
+
+.service-item p {
+  font-family: Lato, system-ui;
+  font-weight: 275;
+  font-size: min(1.25vw, 24px);
+  line-height: 1.21;
+  color: #F0F0F0;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .services-section { padding: 120px 24px; }
+  .services-title { font-size: min(15vw, 140px); }
+  .services-subtitle { font-size: min(6vw, 36px); }
+  .services-grid { grid-template-columns: 1fr; gap: 48px; }
+  .service-item h3 { font-size: clamp(22px, 5vw, 36px); }
+  .service-item p { font-size: clamp(16px, 3.5vw, 24px); }
+}
+
 .work-section {
   position: relative;
-  background: var(--bg-blue);
-  padding: 180px 60px 140px;
-  overflow: hidden;
+  background: #DEE4F0;
+  padding: 153px 60px 100px;
 }
 .work-inner {
   position: relative;
   z-index: 2;
-  max-width: 1800px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 .section-title {
-  font-family: Lato;
-  font-weight: 100;
-  font-size: min(8vw, 140px);
-  line-height: 1;
-  margin-bottom: 100px;
+  font-family: Lato, system-ui;
+  font-weight: 275;
+  font-size: min(3.33vw, 64px);
+  line-height: 1.2;
+  color: #2E343C;
+  margin-bottom: 51px;
 }
-.dot { color: var(--blob-brown); }
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 29px;
+  align-items: flex-start;
+}
+.projects-col {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  flex: 1;
+}
+.projects-col--offset {
+  margin-top: -24px;
 }
 .project-card {
   background: transparent;
@@ -76,39 +185,26 @@
   touch-action: manipulation;
   text-align: left;
   display: block;
+  width: 100%;
+}
+
+.work-section ::ng-deep .reveal-wrapper {
+  border-radius: 0 !important;
 }
 @media (pointer: fine) {
   .project-card { cursor: none; }
 }
-.card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 24px;
-  gap: 40px;
-}
-.card-title {
-  font-family: Lato;
-  font-weight: 100;
-  font-size: min(4vw, 64px);
-  line-height: 1;
-  color: var(--black);
-}
-.card-kind {
-  font-family: Lato;
-  font-weight: 300;
-  font-size: 20px;
-  color: var(--ink);
-  white-space: nowrap;
-}
 @media (max-width: 900px) {
   .big-title { font-size: min(12vw, 140px); white-space: normal; }
   .hero-content { padding: 0 24px; }
+  .services-section { padding: 120px 24px; }
+  .services-title { font-size: min(15vw, 140px); }
+  .services-subtitle { font-size: min(6vw, 36px); }
+  .services-grid { grid-template-columns: 1fr; gap: 48px; }
+  .service-item h3 { font-size: clamp(22px, 5vw, 36px); }
+  .service-item p { font-size: clamp(16px, 3.5vw, 24px); }
   .work-section { padding: 80px 24px 80px; }
-  .section-title { font-size: min(12vw, 100px); margin-bottom: 48px; }
-  .projects-grid { grid-template-columns: 1fr; gap: 48px; }
-  .project-card { grid-column: span 1 !important; }
-  .card-meta { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 16px; }
-  .card-title { font-size: min(8vw, 64px); }
-  .card-kind { font-size: 14px; white-space: normal; }
+  .section-title { font-size: min(12vw, 60px); margin-bottom: 40px; }
+  .projects-grid { flex-direction: column; gap: 32px; }
+  .projects-col--offset { margin-top: 0; }
 }

@@ -24,29 +24,55 @@
       </div>
     </div>
     <div class="scroll-arrow">
-      <app-circle-arrow direction="down" (clicked)="scrollDown()"/>
+      <app-circle-arrow direction="down" (clicked)="scrollTo('.services-section')"/>
     </div>
   </div>
 
+  <!-- Services -->
+  <section class="services-section">
+    <div class="services-inner">
+      <h2 class="services-title">SERVICE</h2>
+      <p class="services-subtitle">Transform your product or service into<br>a new and impactful experience.</p>
+
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Discover and define</h3>
+          <p>Entro nella tua visione per trasformarla in direzione. Analizzo pubblico, obiettivi e contesto: tra ricerca, moodboard e strategia, definisco un concept solido che orienta ogni scelta creativa.</p>
+        </div>
+        <div class="service-item">
+          <h3>Design and develop</h3>
+          <p>Le idee diventano sistema. Dall'esperienza utente alle identità visive, dai contenuti social all'immagine coordinata, progetto soluzioni coerenti, funzionali e riconoscibili, pensate per durare e distinguersi.</p>
+        </div>
+        <div class="service-item">
+          <h3>Refine and deliver</h3>
+          <p>Perfeziono ogni dettaglio fino all'essenziale. Test, iterazioni e cura portano a un risultato finale pulito e coerente: un ecosistema pronto a essere lanciato, crescere e creare connessioni autentiche con il pubblico.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-arrow">
+      <!-- Scroll arrow to point to Selected Work -->
+      <app-circle-arrow direction="down" (clicked)="scrollTo('.work-section')"/>
+    </div>
+  </section>
+
   <!-- Selected Work -->
   <section class="work-section">
-    <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
     <div class="work-inner">
       <div class="section-title">
-        Selected work<span class="dot">.</span>
+        Highlight
       </div>
       <div class="projects-grid">
-        @for (project of projects; track project.id; let i = $index) {
-          <button class="project-card"
-            [style.grid-column]="spans[i]"
-            data-hover="image"
-            (click)="nav.navigate(project.id)">
-            <app-reveal-image [src]="project.img" aspect="16/10"/>
-            <div class="card-meta">
-              <div class="card-title">{{ project.title }}</div>
-              <div class="card-kind">{{ numLabel(i) }} — {{ project.kind }}</div>
-            </div>
-          </button>
+        @for (col of projectColumns; track $index; let ci = $index) {
+          <div class="projects-col" [class.projects-col--offset]="ci === 1">
+            @for (project of col; track project.id) {
+              <button class="project-card"
+                data-hover="image"
+                (click)="nav.navigate(project.id)">
+                <app-reveal-image [src]="project.img" aspect="16/10"/>
+              </button>
+            }
+          </div>
         }
       </div>
     </div>

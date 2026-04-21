@@ -9,12 +9,12 @@ import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
 
 const PROJECTS = [
-  { id: 'ada',    title: 'ada festival',     kind: 'Festival rebranding', img: 'ada-5.jpg' },
-  { id: 'ideate', title: 'ideate',           kind: 'Logo design',          img: 'ideate-5.jpg' },
+  { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.jpg' },
+  { id: 'perlei', title: 'perlei',           kind: 'Social media design',  img: 'perlei-7.jpg' },
   { id: 'riga',   title: 'riga',             kind: 'Brand identity',       img: 'riga-4.jpg' },
-  { id: 'ia',     title: "L'IA e la società moderna", kind: 'Information design', img: 'ia-3fd2d896b0ee.jpg' },
-  { id: 'perlei', title: 'perlei',           kind: 'Social media design',  img: 'perlei-3.jpg' },
+  { id: 'ada',    title: 'ada festival',     kind: 'Festival rebranding',  img: 'ada-1.jpg' },
   { id: 'circus', title: 'circus',           kind: 'Brand identity',       img: 'circus-1.jpg' },
+  { id: 'ideate', title: 'ideate',           kind: 'Logo design',          img: 'ideate-3.jpg' },
 ];
 
 const SPANS = ['span 7', 'span 5', 'span 5', 'span 7', 'span 6', 'span 6'];
@@ -37,6 +37,10 @@ export class HomeComponent implements OnInit {
   line1 = 'Designing experiences'.split(' ');
   line2 = 'for people and brands'.split(' ');
 
+  get projectColumns() {
+    return [0, 1, 2].map(ci => this.projects.filter((_, i) => i % 3 === ci));
+  }
+
   numLabel(i: number): string {
     return String(i + 1).padStart(2, '0');
   }
@@ -47,9 +51,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  scrollDown(): void {
+  scrollTo(selector: string): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+      const el = document.querySelector(selector);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }
