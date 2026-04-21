@@ -5,7 +5,12 @@
       [class.active]="isActive(item.path)"
       [style.color]="textColor()"
       (click)="nav.navigate(item.id)">
-      {{ item.label }}
+      {{ langService.t(item.labelKey) }}
     </button>
   }
 </nav>
+<div class="lang-toggle" [style.color]="textColor()">
+  <button class="lang-btn" [class.active]="langService.lang() === 'it'" (click)="setLang('it')">IT</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn" [class.active]="langService.lang() === 'en'" (click)="setLang('en')">EN</button>
+</div>

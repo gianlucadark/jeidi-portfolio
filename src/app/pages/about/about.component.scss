@@ -32,6 +32,10 @@
   font-size: min(1.7vw, 32px);
   line-height: 1.35;
   color: var(--ink);
+
+  & + .bio-text {
+    margin-top: 2em;
+  }
 }
 .philosophy-section {
   position: relative;

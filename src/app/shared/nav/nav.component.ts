@@ -1,13 +1,14 @@
 import { Component, input, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavigationService } from '../../services/navigation.service';
+import { LangService, Lang } from '../../services/lang.service';
 
 const NAV_ITEMS = [
-  { id: 'home', label: 'Home', path: '/' },
-  { id: 'design', label: 'Design', path: '/design' },
-  { id: 'photo', label: 'Photography', path: '/photo' },
-  { id: 'about', label: 'About', path: '/about' },
-  { id: 'contatti', label: 'Contact', path: '/contatti' },
+  { id: 'home',      labelKey: 'nav.home',        path: '/' },
+  { id: 'design',    labelKey: 'nav.design',       path: '/design' },
+  { id: 'photo',     labelKey: 'nav.photography',  path: '/photo' },
+  { id: 'about',     labelKey: 'nav.about',        path: '/about' },
+  { id: 'contatti',  labelKey: 'nav.contact',      path: '/contatti' },
 ];
 
 @Component({
@@ -20,6 +21,7 @@ export class NavComponent {
   textColor = input('var(--ink)');
   items = NAV_ITEMS;
   nav = inject(NavigationService);
+  langService = inject(LangService);
   private router = inject(Router);
 
   isActive(path: string): boolean {
@@ -27,4 +29,6 @@ export class NavComponent {
     if (path === '/') return url === '/';
     return url.startsWith(path);
   }
+
+  setLang(l: Lang): void { this.langService.setLang(l); }
 }

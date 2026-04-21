@@ -2,7 +2,6 @@
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <section class="section">
     <div class="inner">
-      <!-- <app-circle-arrow direction="left" (clicked)="nav.goBack()"/> -->
       <div class="title-block">
         <h1 class="page-title">{{ title() }}</h1>
         @if (tagline()) {
@@ -19,7 +18,7 @@
       <app-project-grid [images]="grid()" [layout]="layout()"/>
       @if (credits().length) {
         <div class="credits">
-          <p class="credits-label">Progetto realizzato in collaborazione con:</p>
+          <p class="credits-label">{{ creditsLabel() }}</p>
           <ul>
             @for (c of credits(); track c) {
               <li>{{ c }}</li>

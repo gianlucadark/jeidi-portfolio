@@ -7,6 +7,7 @@ import { RevealImageComponent } from '../../shared/reveal-image/reveal-image.com
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
+import { LangService } from '../../services/lang.service';
 
 const PROJECTS = [
   { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.jpg' },
@@ -29,6 +30,7 @@ const SPANS = ['span 7', 'span 5', 'span 5', 'span 7', 'span 6', 'span 6'];
 export class HomeComponent implements OnInit {
   mouseService = inject(MouseService);
   nav = inject(NavigationService);
+  langService = inject(LangService);
   private platformId = inject(PLATFORM_ID);
 
   mounted = signal(false);

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { BlobsComponent } from '../../shared/blobs/blobs.component';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { LangService } from '../../services/lang.service';
 
 const PHOTOS = [
   'perlei-3.jpg', 'perlei-4.jpg', 'perlei-5.jpg',
@@ -20,4 +21,5 @@ const PHOTOS = [
 })
 export class PhotoComponent {
   photos = PHOTOS;
+  langService = inject(LangService);
 }

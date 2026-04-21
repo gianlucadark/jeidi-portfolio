@@ -1,15 +1,16 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { BlobsComponent } from '../../shared/blobs/blobs.component';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 import { BrandProjectCardComponent } from '../../shared/brand-project-card/brand-project-card.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
+import { LangService } from '../../services/lang.service';
 
-const PROJECTS = [
-  { id: 'perlei', title: 'Perlei - Gioielli artigianali',  desc: 'A rebranding in social communication for a jewelry brand.',          img: 'perlei-3.jpg' },
-  { id: 'circus-sm', title: 'CIRCUS Magazine',                desc: 'A digital extent of the print and digital magazine.',           img: 'circus-1.jpg' },
-  { id: 'riga-sm',   title: 'Riga, the shape of tomorrow.',   desc: 'An advertising campaign of the city through social media.',    img: 'riga-2.jpg' },
+const PROJECTS_BASE = [
+  { id: 'perlei',    title: 'Perlei - Gioielli artigianali', descKey: 'social.perlei.desc', img: 'perlei-3.jpg' },
+  { id: 'circus-sm', title: 'CIRCUS Magazine',               descKey: 'social.circus.desc', img: 'circus-1.jpg' },
+  { id: 'riga-sm',   title: 'Riga, the shape of tomorrow.',  descKey: 'social.riga.desc',   img: 'riga-2.jpg' },
 ];
 
 @Component({
@@ -22,5 +23,9 @@ const PROJECTS = [
 export class SocialMediaComponent {
   mouseService = inject(MouseService);
   nav = inject(NavigationService);
-  projects = PROJECTS;
+  langService = inject(LangService);
+
+  projects = computed(() =>
+    PROJECTS_BASE.map(p => ({ ...p, desc: this.langService.t(p.descKey) }))
+  );
 }

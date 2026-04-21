@@ -38,3 +38,31 @@ button {
     transform: scaleX(1);
   }
 }
+
+.lang-toggle {
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-sep {
+  font-family: Inter, system-ui;
+  font-weight: 200;
+  font-size: 13px;
+  opacity: 0.35;
+}
+
+.lang-btn {
+  font-size: 13px !important;
+  padding: 8px 3px !important;
+  opacity: 0.4;
+  transition: opacity .3s ease;
+
+  &.active {
+    opacity: 1;
+  }
+}

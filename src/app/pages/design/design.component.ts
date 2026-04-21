@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 import { NavigationService } from '../../services/navigation.service';
+import { LangService } from '../../services/lang.service';
 
 const PANELS = [
-  { id: 'uxui',        label: 'UX/UI Design',             img: 'brand-uxui.jpg' },
-  { id: 'brand',       label: 'Brand and Visual Identity', img: 'ideate-1.jpg' },
-  { id: 'socialmedia', label: 'Social media design',       img: 'brand-social.jpg' },
+  { id: 'uxui',        labelKey: 'panel.uxui',   img: 'brand-uxui.jpg' },
+  { id: 'brand',       labelKey: 'panel.brand',  img: 'ideate-1.jpg' },
+  { id: 'socialmedia', labelKey: 'panel.social', img: 'brand-social.jpg' },
 ];
 
 @Component({
@@ -18,4 +19,5 @@ const PANELS = [
 export class DesignComponent {
   panels = PANELS;
   nav = inject(NavigationService);
+  langService = inject(LangService);
 }

@@ -32,26 +32,25 @@
   <section class="services-section">
     <div class="services-inner">
       <h2 class="services-title">SERVICE</h2>
-      <p class="services-subtitle">Transform your product or service into<br>a new and impactful experience.</p>
+      <p class="services-subtitle">{{ langService.t('home.services.subtitle') }}</p>
 
       <div class="services-grid">
         <div class="service-item">
           <h3>Discover and define</h3>
-          <p>Entro nella tua visione per trasformarla in direzione. Analizzo pubblico, obiettivi e contesto: tra ricerca, moodboard e strategia, definisco un concept solido che orienta ogni scelta creativa.</p>
+          <p>{{ langService.t('home.services.discover.desc') }}</p>
         </div>
         <div class="service-item">
           <h3>Design and develop</h3>
-          <p>Le idee diventano sistema. Dall'esperienza utente alle identità visive, dai contenuti social all'immagine coordinata, progetto soluzioni coerenti, funzionali e riconoscibili, pensate per durare e distinguersi.</p>
+          <p>{{ langService.t('home.services.design.desc') }}</p>
         </div>
         <div class="service-item">
           <h3>Refine and deliver</h3>
-          <p>Perfeziono ogni dettaglio fino all'essenziale. Test, iterazioni e cura portano a un risultato finale pulito e coerente: un ecosistema pronto a essere lanciato, crescere e creare connessioni autentiche con il pubblico.</p>
+          <p>{{ langService.t('home.services.refine.desc') }}</p>
         </div>
       </div>
     </div>
 
     <div class="scroll-arrow">
-      <!-- Scroll arrow to point to Selected Work -->
       <app-circle-arrow direction="down" (clicked)="scrollTo('.work-section')"/>
     </div>
   </section>
@@ -60,7 +59,7 @@
   <section class="work-section">
     <div class="work-inner">
       <div class="section-title">
-        Highlight
+        {{ langService.t('home.highlight') }}
       </div>
       <div class="projects-grid">
         @for (col of projectColumns; track $index; let ci = $index) {

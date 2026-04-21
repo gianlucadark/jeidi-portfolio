@@ -3,6 +3,7 @@ import { BlobsComponent } from '../../shared/blobs/blobs.component';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { MouseService } from '../../services/mouse.service';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'app-about',
@@ -13,4 +14,5 @@ import { MouseService } from '../../services/mouse.service';
 })
 export class AboutComponent {
   mouseService = inject(MouseService);
+  langService = inject(LangService);
 }

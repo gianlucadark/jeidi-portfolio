@@ -14,7 +14,12 @@
       [class.item-visible]="open()"
       [style.transition-delay]="(0.2 + i * 0.08) + 's'"
       (click)="go(item.id)">
-      {{ item.label }}
+      {{ langService.t(item.labelKey) }}
     </button>
   }
+  <div class="lang-row" [class.item-visible]="open()" [style.transition-delay]="'0.65s'">
+    <button class="lang-opt" [class.active]="langService.lang() === 'it'" (click)="setLang('it')">IT</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-opt" [class.active]="langService.lang() === 'en'" (click)="setLang('en')">EN</button>
+  </div>
 </div>

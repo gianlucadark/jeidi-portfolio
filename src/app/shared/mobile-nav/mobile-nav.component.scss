@@ -69,3 +69,44 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.lang-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s;
+
+  &.item-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.lang-sep {
+  font-family: Lato;
+  font-weight: 100;
+  font-size: 22px;
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.lang-opt {
+  background: transparent;
+  border: none;
+  font-family: Lato;
+  font-weight: 100;
+  font-size: 22px;
+  color: var(--black);
+  cursor: pointer;
+  touch-action: manipulation;
+  opacity: 0.35;
+  padding: 4px 6px;
+  transition: opacity .3s;
+
+  &.active {
+    opacity: 1;
+  }
+}
