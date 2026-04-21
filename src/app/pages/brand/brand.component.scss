@@ -1,5 +1,5 @@
 .page { position: relative; background: var(--bg-blue); overflow: hidden; }
-.section { position: relative; z-index: 2; padding: 200px 136px 120px; }
+.section { position: relative; z-index: 2; padding: 200px 136px 120px 280px; }
 .inner { max-width: 1647px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
 .sub-panels { display: grid; grid-template-columns: 1fr 1fr; min-height: 60vh; }
 .sub-panel {

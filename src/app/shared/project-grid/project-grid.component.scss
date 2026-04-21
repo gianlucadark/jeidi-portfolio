@@ -2,9 +2,19 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 30px;
-  margin-top: 20px;
+}
+.grid-item {
+  /* aspect-ratio set inline — defines row height */
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* make reveal-wrapper fill the grid cell completely */
+.grid-item ::ng-deep .reveal-wrapper {
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
 }
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
-  .grid-item { grid-column: span 1 !important; }
+  .grid { grid-template-columns: 1fr; gap: 20px; }
+  .grid-item { grid-column: span 1 !important; aspect-ratio: 4/3 !important; }
 }

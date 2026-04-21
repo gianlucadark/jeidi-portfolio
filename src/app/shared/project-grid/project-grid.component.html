@@ -1,7 +1,10 @@
 <div class="grid">
   @for (img of images(); track $index; let i = $index) {
-    <div class="grid-item" [style.grid-column]="span(i)" data-hover="image">
-      <app-reveal-image [src]="img" [aspect]="aspect(i)"/>
+    <div class="grid-item"
+         [style.grid-column]="span(i)"
+         [style.aspect-ratio]="rowAspect(i)"
+         data-hover="image">
+      <app-reveal-image [src]="img" aspect="1/1"/>
     </div>
   }
 </div>

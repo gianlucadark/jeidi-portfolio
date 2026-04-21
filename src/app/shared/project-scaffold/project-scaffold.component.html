@@ -2,7 +2,7 @@
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <section class="section">
     <div class="inner">
-      <app-circle-arrow direction="left" (clicked)="nav.goBack()"/>
+      <!-- <app-circle-arrow direction="left" (clicked)="nav.goBack()"/> -->
       <div class="title-block">
         <h1 class="page-title">{{ title() }}</h1>
         @if (tagline()) {
@@ -16,7 +16,7 @@
         <h2 class="subtitle">{{ subtitle() }}</h2>
         <p class="body-text">{{ body() }}</p>
       </div>
-      <app-project-grid [images]="grid()"/>
+      <app-project-grid [images]="grid()" [layout]="layout()"/>
       @if (credits().length) {
         <div class="credits">
           <p class="credits-label">Progetto realizzato in collaborazione con:</p>
