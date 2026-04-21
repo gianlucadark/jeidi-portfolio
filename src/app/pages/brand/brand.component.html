@@ -3,8 +3,7 @@
   <app-corner-logo/>
   <section class="section">
     <div class="inner">
-      <app-circle-arrow direction="left" (clicked)="nav.navigate('design')"/>
-      @for (p of projects; track p.id) {
+@for (p of projects; track p.id) {
         <app-brand-project-card
           [project]="p"
           (clicked)="nav.navigate(p.id)"/>

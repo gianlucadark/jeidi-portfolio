@@ -1,6 +1,6 @@
 <div class="mobile-header">
   <button class="logo-btn" (click)="navService.navigate('home')">
-    <app-logo [size]="34" [color]="textColor()"/>
+    <app-logo [size]="34"/>
   </button>
   <button class="hamburger" (click)="open.set(!open())">
     <span [style.width]="open() ? '20px' : '16px'"></span>

@@ -20,7 +20,6 @@ export class ProjectScaffoldComponent {
   body = input('');
   hero = input('');
   grid = input<string[]>([]);
-  back = input('design');
 
   mouseService = inject(MouseService);
   nav = inject(NavigationService);

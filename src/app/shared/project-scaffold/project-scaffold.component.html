@@ -2,7 +2,7 @@
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <section class="section">
     <div class="inner">
-      <app-circle-arrow direction="left" (clicked)="nav.navigate(back())"/>
+      <app-circle-arrow direction="left" (clicked)="nav.goBack()"/>
       <h1 class="page-title">{{ title() }}</h1>
       @if (hero()) {
         <app-reveal-image [src]="hero()" aspect="1647/824"/>
