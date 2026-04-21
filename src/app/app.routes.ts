@@ -16,5 +16,7 @@ export const routes: Routes = [
   { path: 'circus', loadComponent: () => import('./pages/projects/circus/circus.component').then(m => m.CircusComponent) },
   { path: 'perlei', loadComponent: () => import('./pages/projects/perlei/perlei.component').then(m => m.PerleiComponent) },
   { path: 'regiro', loadComponent: () => import('./pages/projects/regiro/regiro.component').then(m => m.RegiroComponent) },
+  { path: 'circus-sm', loadComponent: () => import('./pages/projects/circus-sm/circus-sm.component').then(m => m.CircusSmComponent) },
+  { path: 'riga-sm', loadComponent: () => import('./pages/projects/riga-sm/riga-sm.component').then(m => m.RigaSmComponent) },
   { path: '**', redirectTo: '' },
 ];

@@ -4,13 +4,22 @@
   <section class="section">
     <div class="inner">
 <h1 class="page-title">UX/UI Design</h1>
-      <app-brand-project-card
-        [project]="{ id:'regiro', title:'Regiro', desc:'A walking-tour app that turns the city into stories.', img:'regiro-1.jpg' }"
-        (clicked)="nav.navigate('regiro')"/>
-      <div class="coming-soon">
-        <p>More case studies coming soon.</p>
-      </div>
+      @for (p of projects; track p.id) {
+        <app-brand-project-card [project]="p" (clicked)="nav.navigate(p.id)"/>
+      }
     </div>
   </section>
+  <div class="sub-panels">
+    <button class="sub-panel" data-hover="image"
+      style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(ideate-5.jpg)"
+      (click)="nav.navigate('brand')">
+      <span>Brand and Visual Identity</span>
+    </button>
+    <button class="sub-panel" data-hover="image"
+      style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(brand-social.jpg)"
+      (click)="nav.navigate('socialmedia')">
+      <span>Social media design</span>
+    </button>
+  </div>
   <app-footer/>
 </div>

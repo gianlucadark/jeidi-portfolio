@@ -16,10 +16,12 @@ import { NavigationService } from '../../services/navigation.service';
 })
 export class ProjectScaffoldComponent {
   title = input('');
+  tagline = input('');
   subtitle = input('');
   body = input('');
   hero = input('');
   grid = input<string[]>([]);
+  credits = input<string[]>([]);
 
   mouseService = inject(MouseService);
   nav = inject(NavigationService);

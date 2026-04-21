@@ -7,8 +7,9 @@ import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
 
 const PROJECTS = [
-  { id: 'perlei', title: 'Perlei', desc: 'Editorial social content for a curated craft brand.', img: 'perlei-3.jpg' },
-  { id: 'circus', title: 'Circus', desc: 'A traveling performance identity for social.',         img: 'circus-1.jpg' },
+  { id: 'perlei', title: 'Perlei - Gioielli artigianali',  desc: 'A rebranding in social communication for a jewelry brand.',          img: 'perlei-3.jpg' },
+  { id: 'circus-sm', title: 'CIRCUS Magazine',                desc: 'A digital extent of the print and digital magazine.',           img: 'circus-1.jpg' },
+  { id: 'riga-sm',   title: 'Riga, the shape of tomorrow.',   desc: 'An advertising campaign of the city through social media.',    img: 'riga-2.jpg' },
 ];
 
 @Component({

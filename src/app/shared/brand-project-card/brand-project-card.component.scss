@@ -24,22 +24,26 @@
   background-position: center;
 }
 .card-info {
-  margin-top: 40px;
-  padding: 0 10%;
-  text-align: center;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 .card-title {
-  font-family: Lato;
+  font-family: Inter, system-ui;
   font-weight: 400;
-  font-size: min(6.7vw, 128px);
-  line-height: 1;
-  color: var(--ink);
+  font-size: clamp(14px, 1.25vw, 24px);
+  line-height: 1.21;
+  color: #2E343C;
 }
 .card-desc {
-  margin-top: 16px;
-  font-family: Lato;
+  margin-top: 0;
+  font-family: Inter, system-ui;
   font-weight: 300;
-  font-size: min(1.66vw, 32px);
-  line-height: 1.2;
-  color: var(--ink);
+  font-size: clamp(14px, 1.25vw, 24px);
+  line-height: 1.21;
+  color: #2E343C;
+  text-align: right;
 }

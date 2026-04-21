@@ -6,4 +6,22 @@
   font-size: min(9vw, 140px); line-height: 1;
   color: var(--black); margin: 0; letter-spacing: -0.01em;
 }
-@media (max-width: 900px) { .section { padding: 100px 30px 60px; } }
+.sub-panels { display: grid; grid-template-columns: 1fr 1fr; min-height: 60vh; }
+.sub-panel {
+  border: none; padding: 0; cursor: none;
+  position: relative; min-height: 60vh;
+  background-size: cover; background-position: center;
+}
+.sub-panel span {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: Lato; font-weight: 275; font-size: min(3.5vw, 48px);
+  color: rgb(240,240,240);
+  transition: letter-spacing .6s ease;
+}
+.sub-panel:hover span { letter-spacing: .08em; }
+@media (max-width: 900px) {
+  .section { padding: 100px 30px 60px; }
+  .sub-panels { grid-template-columns: 1fr; }
+  .sub-panel { min-height: 40vh; }
+}
