@@ -9,7 +9,7 @@
     <div class="masonry">
       @for (photo of photos; track $index) {
         <div class="photo-item" data-hover="image">
-          <img [src]="photo" alt=""/>
+          <img [src]="photo" alt="" loading="lazy" decoding="async"/>
         </div>
       }
     </div>

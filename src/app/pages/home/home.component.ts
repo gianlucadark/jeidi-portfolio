@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, inject, PLATFORM_ID } from '@angular/core';
+﻿import { Component, OnInit, signal, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { BlobsComponent } from '../../shared/blobs/blobs.component';
 import { LogoComponent } from '../../shared/logo/logo.component';
@@ -10,12 +10,12 @@ import { NavigationService } from '../../services/navigation.service';
 import { LangService } from '../../services/lang.service';
 
 const PROJECTS = [
-  { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.jpg' },
-  { id: 'perlei', title: 'perlei',           kind: 'Social media design',  img: 'perlei-7.jpg' },
-  { id: 'riga',   title: 'riga',             kind: 'Brand identity',       img: 'riga-4.jpg' },
-  { id: 'ada',    title: 'ada festival',     kind: 'Festival rebranding',  img: 'ada-1.jpg' },
-  { id: 'circus', title: 'circus',           kind: 'Brand identity',       img: 'circus-1.jpg' },
-  { id: 'ideate', title: 'ideate',           kind: 'Logo design',          img: 'ideate-3.jpg' },
+  { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.webp' },
+  { id: 'perlei', title: 'perlei',           kind: 'Social media design',  img: 'perlei-7.webp' },
+  { id: 'riga',   title: 'riga',             kind: 'Brand identity',       img: 'riga-4.webp' },
+  { id: 'ada',    title: 'ada festival',     kind: 'Festival rebranding',  img: 'ada-1.webp' },
+  { id: 'circus', title: 'circus',           kind: 'Brand identity',       img: 'circus-1.webp' },
+  { id: 'ideate', title: 'ideate',           kind: 'Logo design',          img: 'ideate-3.webp' },
 ];
 
 const SPANS = ['span 7', 'span 5', 'span 5', 'span 7', 'span 6', 'span 6'];

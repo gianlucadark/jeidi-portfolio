@@ -3,6 +3,6 @@
   [style.aspect-ratio]="aspect()"
   [style.border-radius.px]="borderRadius()">
   @if (src()) {
-    <img [src]="src()" [alt]="alt()" [class.visible]="visible()"/>
+    <img [src]="src()" [alt]="alt()" [class.visible]="visible()" loading="lazy" decoding="async"/>
   }
 </div>

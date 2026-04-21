@@ -1,12 +1,12 @@
-import { Component, inject } from '@angular/core';
+﻿import { Component, inject } from '@angular/core';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 import { NavigationService } from '../../services/navigation.service';
 import { LangService } from '../../services/lang.service';
 
 const PANELS = [
-  { id: 'uxui',        labelKey: 'panel.uxui',   img: 'brand-uxui.jpg' },
-  { id: 'brand',       labelKey: 'panel.brand',  img: 'ideate-1.jpg' },
-  { id: 'socialmedia', labelKey: 'panel.social', img: 'brand-social.jpg' },
+  { id: 'uxui',        labelKey: 'panel.uxui',   img: 'brand-uxui.webp' },
+  { id: 'brand',       labelKey: 'panel.brand',  img: 'ideate-1.webp' },
+  { id: 'socialmedia', labelKey: 'panel.social', img: 'brand-social.webp' },
 ];
 
 @Component({
