@@ -57,7 +57,10 @@ export class HomeComponent implements OnInit {
   scrollTo(selector: string): void {
     if (isPlatformBrowser(this.platformId)) {
       const el = document.querySelector(selector);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     }
   }
 }

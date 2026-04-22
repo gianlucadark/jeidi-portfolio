@@ -44,6 +44,10 @@ export class App implements OnInit {
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
+      if (Math.abs(window.scrollY - currentScroll) > 10) {
+        currentScroll = window.scrollY;
+        targetScroll = window.scrollY;
+      }
       targetScroll = Math.max(0, Math.min(
         document.documentElement.scrollHeight - window.innerHeight,
         targetScroll + e.deltaY
