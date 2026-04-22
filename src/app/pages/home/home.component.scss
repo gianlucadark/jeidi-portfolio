@@ -137,6 +137,13 @@
 
 @media (max-width: 900px) {
   .services-section { padding: 120px 24px; }
+  .services-section::before {
+    left: -100px;
+    right: -100px;
+    top: -150px;
+    bottom: -150px;
+    filter: blur(180px);
+  }
   .services-title { font-size: min(15vw, 140px); }
   .services-subtitle { font-size: min(6vw, 36px); }
   .services-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -199,12 +206,19 @@
   .big-title { font-size: min(12vw, 140px); white-space: normal; }
   .hero-content { padding: 0 24px; }
   .services-section { padding: 120px 24px; }
+  .services-section::before {
+    left: -100px;
+    right: -100px;
+    top: -150px;
+    bottom: -150px;
+    filter: blur(50px);
+  }
   .services-title { font-size: min(15vw, 140px); }
   .services-subtitle { font-size: min(6vw, 36px); }
   .services-grid { grid-template-columns: 1fr; gap: 48px; }
   .service-item h3 { font-size: clamp(22px, 5vw, 36px); }
   .service-item p { font-size: clamp(16px, 3.5vw, 24px); }
-  .work-section { padding: 80px 24px 80px; }
+  .work-section { padding: 150px 24px 80px; }
   .section-title { font-size: min(12vw, 60px); margin-bottom: 40px; }
   .projects-grid { flex-direction: column; gap: 32px; }
   .projects-col--offset { margin-top: 0; }

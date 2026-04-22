@@ -24,9 +24,19 @@ export class NavComponent {
   langService = inject(LangService);
   private router = inject(Router);
 
+  private readonly designSubRoutes = [
+    '/brand', '/uxui', '/socialmedia',
+    '/ada', '/ideate', '/riga',
+    '/regiro', '/circus', '/ia',
+    '/perlei', '/circus-sm', '/riga-sm',
+  ];
+
   isActive(path: string): boolean {
     const url = this.router.url.split('?')[0];
     if (path === '/') return url === '/';
+    if (path === '/design') {
+      return url.startsWith('/design') || this.designSubRoutes.includes(url);
+    }
     return url.startsWith(path);
   }
 
