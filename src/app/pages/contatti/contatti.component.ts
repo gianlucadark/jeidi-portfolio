@@ -6,8 +6,8 @@ import { MouseService } from '../../services/mouse.service';
 const CONTACTS = [
   { label: 'Jeidiclemente@gmail.com'.toUpperCase(), type: 'mail',      href: 'mailto:jeidiclemente@gmail.com' },
   { label: '+39 342 524 6479'.toUpperCase(),         type: 'phone',     href: 'tel:+393425246479' },
-  { label: 'Jeidiclemente'.toUpperCase(),            type: 'linkedin',  href: 'https://linkedin.com/in/jeidiclemente' },
-  { label: 'Jeidirphoto'.toUpperCase(),              type: 'instagram', href: 'https://instagram.com/jeidirphoto' },
+  { label: 'Jeidiclemente'.toUpperCase(),            type: 'linkedin',  href: 'https://www.linkedin.com/in/jeidi-clemente' },
+  { label: 'Jeidirphoto'.toUpperCase(),              type: 'instagram', href: 'https://www.instagram.com/jeidirphoto' },
 ];
 
 @Component({
