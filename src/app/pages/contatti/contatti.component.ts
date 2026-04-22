@@ -4,10 +4,10 @@ import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.compon
 import { MouseService } from '../../services/mouse.service';
 
 const CONTACTS = [
-  { label: 'Jeidiclemente@gmail.com', type: 'mail',      href: 'mailto:jeidiclemente@gmail.com' },
-  { label: '+39 342 524 6479',         type: 'phone',     href: 'tel:+393425246479' },
-  { label: 'Jeidiclemente',            type: 'linkedin',  href: 'https://linkedin.com/in/jeidiclemente' },
-  { label: 'Jeidirphoto',              type: 'instagram', href: 'https://instagram.com/jeidirphoto' },
+  { label: 'Jeidiclemente@gmail.com'.toUpperCase(), type: 'mail',      href: 'mailto:jeidiclemente@gmail.com' },
+  { label: '+39 342 524 6479'.toUpperCase(),         type: 'phone',     href: 'tel:+393425246479' },
+  { label: 'Jeidiclemente'.toUpperCase(),            type: 'linkedin',  href: 'https://linkedin.com/in/jeidiclemente' },
+  { label: 'Jeidirphoto'.toUpperCase(),              type: 'instagram', href: 'https://instagram.com/jeidirphoto' },
 ];
 
 @Component({

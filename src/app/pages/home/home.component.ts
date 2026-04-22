@@ -8,6 +8,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
 import { LangService } from '../../services/lang.service';
+import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
 
 const PROJECTS = [
   { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.webp' },
@@ -23,7 +24,7 @@ const SPANS = ['span 7', 'span 5', 'span 5', 'span 7', 'span 6', 'span 6'];
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BlobsComponent, CircleArrowComponent, RevealImageComponent, FooterComponent],
+  imports: [BlobsComponent, CircleArrowComponent, RevealImageComponent, FooterComponent, CornerLogoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
