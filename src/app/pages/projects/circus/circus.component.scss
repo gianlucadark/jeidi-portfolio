@@ -1,0 +1,67 @@
+.page { position: relative; background: var(--bg-blue); overflow: hidden; }
+.section { position: relative; z-index: 2; padding: 200px 136px 100px; }
+.inner {
+  max-width: 1647px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 80px;
+}
+.title-block { display: flex; flex-direction: column; gap: 8px; }
+.page-title {
+  font-family: Lato; font-weight: 275;
+  font-size: min(9vw, 140px); line-height: 1;
+  color: var(--black); margin: 0; letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.tagline {
+  font-family: Lato; font-weight: 275;
+  font-size: clamp(16px, 2.08vw, 40px); line-height: 1.2;
+  color: var(--black); margin: 0;
+}
+.content { display: flex; flex-direction: column; gap: 68px; }
+.project-info {
+  display: flex; flex-direction: column; gap: 10px;
+  text-align: center;
+}
+.subtitle {
+  font-family: Lato; font-weight: 250;
+  font-size: min(6.7vw, 128px); line-height: 1.05;
+  color: var(--ink); margin: 0;
+}
+.body-text {
+  font-family: Lato; font-weight: 300;
+  font-size: min(1.66vw, 32px); line-height: 1.19;
+  color: var(--ink); margin: 0 auto; max-width: 1078px; text-align: center;
+}
+.img-section { display: flex; flex-direction: column; gap: 30px; }
+
+.full-video {
+  width: 100%; display: block;
+  border-radius: 20px; aspect-ratio: 1647/971;
+  object-fit: cover;
+}
+
+.two-col-row { display: flex; gap: 30px; }
+.col-left  { flex: 530 1 0; min-width: 0; }
+.col-right { flex: 1087 1 0; min-width: 0; }
+
+.body2-block { display: flex; justify-content: center; }
+
+.two-card-row { display: flex; gap: 30px; }
+.card-a { flex: 764 1 0; min-width: 0; }
+.card-b { flex: 853 1 0; min-width: 0; }
+
+.three-card-row { display: flex; gap: 30px; }
+.three-card-row app-reveal-image { flex: 1 1 0; min-width: 0; }
+
+@media (max-width: 900px) {
+  .section { padding: 100px 30px 60px; }
+  .inner { gap: 40px; }
+  .content { gap: 40px; }
+  .page-title { font-size: min(14vw, 100px); }
+  .tagline { font-size: clamp(14px, 4vw, 24px); }
+  .subtitle { font-size: min(10vw, 80px); }
+  .body-text { font-size: 18px; }
+  .two-col-row,
+  .two-card-row,
+  .three-card-row { flex-direction: column; }
+  .img-section { gap: 20px; }
+}

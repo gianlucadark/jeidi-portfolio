@@ -77,6 +77,7 @@ const TR: Record<Lang, Record<string, string>> = {
     'project.circus.tagline': "Un'analisi sulla contemporaneità attraverso l'editoria cartacea e digitale",
     'project.circus.subtitle': 'Digital magazine',
     'project.circus.body': "CIRCUS è un progetto editoriale che riflette sul modo in cui oggi osserviamo e consumiamo immagini. Accanto alla rivista, lo sviluppo di un sito web come estensione digitale del progetto, che non replica la rivista cartacea, ma la amplia, offrendo nuovi modi di fruizione e interazione. Il sito nasce come una rivista digitale, ma si evolve in una piattaforma più ampia che integra contenuti editoriali, un community hub e uno shop. L'obiettivo è creare uno spazio fluido in cui l'utente non si limita a navigare, ma esplora e approfondisce i contenuti in modo naturale.",
+    'project.circus.body2': "Il progetto si concentra su semplicità, ritmo e leggibilità: interfacce pulite, gerarchie chiare e un uso controllato degli elementi visivi permettono di valorizzare le immagini senza sovraccaricare l'esperienza. Il design accompagna l'utente senza distrazioni, mantenendo coerenza con l'identità del brand e con il concept di un linguaggio più essenziale e contemporaneo.",
 
     // Project: ideate
     'project.ideate.subtitle': 'Creative studio',
@@ -166,6 +167,7 @@ const TR: Record<Lang, Record<string, string>> = {
     'project.circus.tagline': "An analysis of contemporary society through print and digital publishing",
     'project.circus.subtitle': 'Digital magazine',
     'project.circus.body': "CIRCUS is an editorial project that reflects on the way we observe and consume images today. Alongside the magazine, a website was developed as a digital extension of the project — not replicating the print edition, but expanding it, offering new ways of experiencing and interacting with the content. The site was conceived as a digital magazine but evolves into a broader platform integrating editorial content, a community hub, and a shop. The goal is to create a fluid space where the user doesn't just browse, but explores and deepens content in a natural way.",
+    'project.circus.body2': "The project focuses on simplicity, rhythm, and readability: clean interfaces, clear hierarchies, and controlled use of visual elements allow images to shine without overwhelming the experience. The design guides the user without distractions, maintaining coherence with the brand identity and the concept of a more essential and contemporary visual language.",
 
     // Project: ideate
     'project.ideate.tagline': 'Creative studio',

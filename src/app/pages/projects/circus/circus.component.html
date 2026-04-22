@@ -1,7 +1,48 @@
-﻿<app-project-scaffold
-  projectKey="project.circus"
-  title="circus magazine"
-  hero="circus-4.webp"
-  [grid]="['circus-3.webp','circus-2.webp','circus-1.webp']"
-  [layout]="['span 6','span 3','span 3']"
-/>
+<div class="page">
+  <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+  <section class="section">
+    <div class="inner">
+      <app-circle-arrow direction="right" (clicked)="nav.goBack()"/>
+      <div class="title-block">
+        <h1 class="page-title">circus magazine</h1>
+        <p class="tagline">{{ tagline() }}</p>
+      </div>
+      <div class="content">
+        <app-reveal-image src="circus-4.webp" aspect="1647/971"/>
+        <div class="project-info">
+          <h2 class="subtitle">{{ subtitle() }}</h2>
+          <p class="body-text">{{ body() }}</p>
+        </div>
+        <div class="img-section">
+          <video class="full-video" src="Home.mp4" autoplay muted loop playsinline></video>
+          <!-- <app-reveal-image src="circus-3.webp" aspect="1647/977"/> -->
+          <div class="two-col-row">
+            <div class="col-left">
+              <app-reveal-image src="circus-3.webp" aspect="530/850"/>
+            </div>
+            <div class="col-right">
+              <app-reveal-image src="circus-1.webp" aspect="1087/850"/>
+            </div>
+          </div>
+          <div class="body2-block">
+            <p class="body-text">{{ body2() }}</p>
+          </div>
+          <div class="two-card-row">
+            <!-- <div class="card-a">
+              <app-reveal-image src="circus-5.webp" aspect="764/915"/>
+            </div> -->
+            <div class="card-b">
+              <app-reveal-image src="circus-2.webp" aspect="853/915"/>
+            </div>
+          </div>
+          <div class="three-card-row">
+            <app-reveal-image src="circus-5.webp" aspect="530/552"/>
+            <app-reveal-image src="circus-6.webp" aspect="530/552"/>
+            <app-reveal-image src="circus-7.webp" aspect="530/552"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer/>
+</div>
