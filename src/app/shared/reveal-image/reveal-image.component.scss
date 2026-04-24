@@ -19,3 +19,14 @@ img {
   transition: transform 1.6s cubic-bezier(.2,.8,.2,1);
 }
 img.visible { transform: scale(1); }
+
+/* On mobile, show cards immediately without scroll-reveal animation */
+@media (max-width: 900px) {
+  .reveal-wrapper {
+    transform: none;
+    opacity: 1;
+  }
+  img {
+    transform: none;
+  }
+}
