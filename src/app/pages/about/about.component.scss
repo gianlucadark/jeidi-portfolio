@@ -54,9 +54,18 @@
   text-align: center;
 }
 @media (max-width: 900px) {
-  .bio-section { padding: 120px 30px 60px; align-items: flex-start; text-align: left; }
+  .bio-section {
+    padding: 120px 24px 60px;
+    align-items: flex-start;
+    text-align: left;
+    min-height: auto;
+  }
   .big-title { font-size: min(14vw, 100px); }
-  .bio-text { text-align: left; font-size: 18px; }
-  .philosophy-section { padding: 60px 30px 100px; }
+  .bio-text {
+    text-align: left;
+    font-size: 17px;
+    margin-top: 40px;
+  }
+  .philosophy-section { padding: 60px 24px 100px; }
   .philosophy-title { font-size: min(12vw, 80px); }
 }

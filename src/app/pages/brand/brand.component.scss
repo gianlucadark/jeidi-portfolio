@@ -16,7 +16,8 @@
 }
 .sub-panel:hover span { letter-spacing: .08em; }
 @media (max-width: 900px) {
-  .section { padding: 100px 30px 60px; }
+  .section { padding: 100px 24px 60px; }
   .sub-panels { grid-template-columns: 1fr; }
   .sub-panel { min-height: 40vh; }
+  .sub-panel span { font-size: 24px; }
 }

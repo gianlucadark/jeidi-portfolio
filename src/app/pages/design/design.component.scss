@@ -37,6 +37,9 @@
 }
 @media (max-width: 900px) {
   .panels { grid-template-columns: 1fr; }
-  .panel { min-height: 40vh; }
-  .panel-label { font-size: 28px; }
+  .panel { min-height: 50vh; }
+  .panel-label {
+    font-size: 24px;
+    padding: 0 24px;
+  }
 }

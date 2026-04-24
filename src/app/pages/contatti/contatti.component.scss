@@ -37,5 +37,15 @@
   text-align: center;
 }
 @media (max-width: 600px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+  .contact-section {
+    padding: 120px 24px 60px;
+    min-height: 100svh;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .contact-label {
+    font-size: 20px;
+  }
 }

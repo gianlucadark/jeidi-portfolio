@@ -134,21 +134,7 @@
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  .services-section { padding: 120px 24px; }
-  .services-section::before {
-    left: -100px;
-    right: -100px;
-    top: -150px;
-    bottom: -150px;
-    filter: blur(180px);
-  }
-  .services-title { font-size: min(15vw, 140px); }
-  .services-subtitle { font-size: min(6vw, 36px); }
-  .services-grid { grid-template-columns: 1fr; gap: 48px; }
-  .service-item h3 { font-size: clamp(22px, 5vw, 36px); }
-  .service-item p { font-size: clamp(16px, 3.5vw, 24px); }
-}
+/* Mobile-only rules consolidated below in the single @media block */
 
 .work-section {
   position: relative;
@@ -202,23 +188,64 @@
   .project-card { cursor: none; }
 }
 @media (max-width: 900px) {
-  .big-title { font-size: min(12vw, 140px); white-space: normal; }
-  .hero-content { padding: 0 24px; }
-  .services-section { padding: 120px 24px; }
-  .services-section::before {
-    left: -100px;
-    right: -100px;
-    top: -150px;
-    bottom: -150px;
-    filter: blur(20px);
+  .hero {
+    min-height: 100svh;
   }
-  .services-title { font-size: min(15vw, 140px); }
-  .services-subtitle { font-size: min(6vw, 36px); }
-  .services-grid { grid-template-columns: 1fr; gap: 48px; }
-  .service-item h3 { font-size: clamp(22px, 5vw, 36px); }
-  .service-item p { font-size: clamp(16px, 3.5vw, 24px); }
-  .work-section { padding: 150px 24px 80px; }
-  .section-title { font-size: min(12vw, 60px); margin-bottom: 40px; }
-  .projects-grid { flex-direction: column; gap: 32px; }
-  .projects-col--offset { margin-top: 0; }
+  .big-title {
+    font-size: min(12vw, 140px);
+    white-space: normal;
+  }
+  .hero-content {
+    padding: 0 24px;
+  }
+  .scroll-arrow {
+    bottom: 40px;
+  }
+  .services-section {
+    padding: 80px 24px 120px;
+    min-height: auto;
+  }
+  .services-section::before {
+    left: -20px;
+    right: -20px;
+    top: -200px;
+    bottom: -500px;
+    filter: blur(160px);
+  }
+  .services-inner {
+    gap: 48px;
+  }
+  .services-title {
+    font-size: min(15vw, 140px);
+  }
+  .services-subtitle {
+    font-size: clamp(18px, 5vw, 36px);
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .service-item h3 {
+    font-size: clamp(20px, 5vw, 36px);
+  }
+  .service-item p {
+    font-size: clamp(15px, 3.5vw, 24px);
+  }
+  .work-section {
+    padding: 80px 24px 80px;
+  }
+  .section-title {
+    font-size: min(12vw, 60px);
+    margin-bottom: 32px;
+  }
+  .projects-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .projects-col {
+    gap: 24px;
+  }
+  .projects-col--offset {
+    margin-top: 0;
+  }
 }

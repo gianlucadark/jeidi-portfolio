@@ -31,6 +31,11 @@ button, a { font-family: inherit; }
   body, body * { cursor: none !important; }
 }
 
+/* Better mobile touch interactions */
+@media (pointer: coarse) {
+  * { -webkit-tap-highlight-color: transparent; }
+}
+
 ::selection { background: var(--blob-blue); color: white; }
 
 ::-webkit-scrollbar { width: 8px; }

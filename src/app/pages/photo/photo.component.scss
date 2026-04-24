@@ -70,3 +70,35 @@ img {
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 900px) {
+  .photo-section {
+    padding: 120px 16px 40px;
+  }
+  .photo-header {
+    margin-bottom: 40px;
+  }
+  .photo-title {
+    font-size: min(16vw, 100px);
+  }
+  .photo-subtitle {
+    font-size: 14px;
+    letter-spacing: .15em;
+  }
+  .masonry {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 16px;
+  }
+  .photo-item {
+    &:nth-child(10),
+    &:nth-child(23) {
+      grid-column: span 1;
+    }
+  }
+  .photo-item img,
+  .photo-item:nth-child(n) > img {
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+}

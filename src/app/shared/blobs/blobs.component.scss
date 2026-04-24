@@ -13,6 +13,7 @@
   background: var(--blob-blue);
   opacity: 0.55;
   filter: blur(80px);
+  will-change: transform;
 }
 .blob-brown {
   position: absolute;
@@ -39,4 +40,26 @@
   transform: rotate(34deg);
   transition: transform 1.2s cubic-bezier(.2,.8,.2,1);
   will-change: transform;
+}
+
+/* Mobile: reduce blur for performance & visual parity with desktop */
+@media (max-width: 900px) {
+  .blob-full {
+    left: -30%; top: -30%;
+    width: 160%; height: 160%;
+    filter: blur(60px);
+    opacity: 0.5;
+  }
+  .blob-brown {
+    width: 80vw; height: 80vw;
+    left: 20%; top: -20%;
+    filter: blur(70px);
+    opacity: 0.4;
+  }
+  .blob-blue {
+    width: 80vw; height: 80vw;
+    left: -20%; top: 20%;
+    filter: blur(70px);
+    opacity: 0.4;
+  }
 }
