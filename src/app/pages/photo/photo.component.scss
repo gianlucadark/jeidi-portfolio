@@ -28,19 +28,45 @@
   letter-spacing: .2em;
 }
 .masonry {
-  columns: 3 400px;
-  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min(50vw, 900px);
+  gap: 24px;
   max-width: 1800px;
   margin: 0 auto;
 }
 .photo-item {
-  break-inside: avoid;
-  margin-bottom: 24px;
   border-radius: 0px;
   overflow: hidden;
   cursor: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-child(10),
+  &:nth-child(23) {
+    grid-column: span 3;
+  }
+
+  // Pattern A (centro più basso)
+  &:nth-child(2) > img,
+  &:nth-child(8) > img,
+  &:nth-child(15) > img,
+  &:nth-child(21) > img,
+  // Pattern B (lati più bassi)
+  &:nth-child(4) > img,
+  &:nth-child(6) > img,
+  &:nth-child(11) > img,
+  &:nth-child(13) > img,
+  &:nth-child(17) > img,
+  &:nth-child(19) > img {
+    height: 80%;
+  }
 }
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
