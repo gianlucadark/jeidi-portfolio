@@ -26,6 +26,7 @@ const TR: Record<Lang, Record<string, string>> = {
     'about.philosophy': "Trasformo idee in esperienze visive coerenti e significative che raccontano storie e lasciano un segno.",
 
     // Photo
+    'photo.title': 'Fotografia',
     'photo.events': 'EVENTI · MODA · RITRATTI',
 
     // Panels (design/brand/uxui/social)
@@ -116,6 +117,7 @@ const TR: Record<Lang, Record<string, string>> = {
     'about.philosophy': "I turn ideas into coherent, meaningful visual experiences that tell stories and leave a mark.",
 
     // Photo
+    'photo.title': 'Photography',
     'photo.events': 'EVENTS · FASHION · PORTRAITS',
 
     // Panels
