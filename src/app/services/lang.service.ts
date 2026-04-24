@@ -31,7 +31,7 @@ const TR: Record<Lang, Record<string, string>> = {
 
     // Panels (design/brand/uxui/social)
     'panel.uxui': 'UX/UI Design',
-    'panel.brand': 'Brand and Visual Identity',
+    'panel.brand': 'Brand and<br/>visual identity',
     'panel.social': 'Social media design',
 
     // Credits
@@ -122,7 +122,7 @@ const TR: Record<Lang, Record<string, string>> = {
 
     // Panels
     'panel.uxui': 'UX/UI Design',
-    'panel.brand': 'Brand and Visual Identity',
+    'panel.brand': 'Brand and<br/>visual identity',
     'panel.social': 'Social media design',
 
     // Credits

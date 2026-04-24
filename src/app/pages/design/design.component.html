@@ -6,7 +6,7 @@
         data-hover="image"
         [style.background-image]="'linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(' + panel.img + ')'"
         (click)="nav.navigate(panel.id)">
-        <span class="panel-label">{{ langService.t(panel.labelKey) }}</span>
+        <span class="panel-label" [innerHTML]="langService.t(panel.labelKey)"></span>
       </button>
     }
   </div>

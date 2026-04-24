@@ -1,7 +1,7 @@
 footer {
   background: var(--bg-footer);
   color: var(--ink);
-  padding: 80px 60px;
+  padding: 80px 60px 160px 60px; // Extra bottom padding for the absolute bottom-row
   min-height: 700px;
   position: relative;
   display: flex;
@@ -61,4 +61,37 @@ footer {
   .social-row { justify-content: flex-start; }
   .name-row { margin-top: 48px; }
   .name-big { font-size: min(14vw, 100px); }
+}
+
+.bottom-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #404F80;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  
+  a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #ffffff !important;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }
