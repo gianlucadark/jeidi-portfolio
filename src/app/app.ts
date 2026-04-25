@@ -40,7 +40,26 @@ export class App implements OnInit {
 
     let targetScroll = 0;
     let currentScroll = 0;
+    let ticking = false;
     const EASE = 0.085;
+
+    const tick = () => {
+      const diff = targetScroll - currentScroll;
+      if (Math.abs(diff) > 0.5) {
+        currentScroll += diff * EASE;
+        window.scrollTo(0, currentScroll);
+        requestAnimationFrame(tick);
+      } else {
+        ticking = false;
+      }
+    };
+
+    const startTicking = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(tick);
+      }
+    };
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -52,19 +71,10 @@ export class App implements OnInit {
         document.documentElement.scrollHeight - window.innerHeight,
         targetScroll + e.deltaY
       ));
-    };
-
-    const tick = () => {
-      const diff = targetScroll - currentScroll;
-      if (Math.abs(diff) > 0.1) {
-        currentScroll += diff * EASE;
-        window.scrollTo(0, currentScroll);
-      }
-      requestAnimationFrame(tick);
+      startTicking();
     };
 
     window.addEventListener('wheel', onWheel, { passive: false });
-    requestAnimationFrame(tick);
 
     this.router.events.pipe(
       filter((e: Event): e is NavigationEnd => e instanceof NavigationEnd)
