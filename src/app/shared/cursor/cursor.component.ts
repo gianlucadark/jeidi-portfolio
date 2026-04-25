@@ -33,9 +33,9 @@ export class CursorComponent implements OnInit {
     const onDown = () => this.mouseDown.set(true);
     const onUp = () => this.mouseDown.set(false);
 
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mousedown', onDown);
-    window.addEventListener('mouseup', onUp);
+    window.addEventListener('mousemove', onMove, { passive: true });
+    window.addEventListener('mousedown', onDown, { passive: true });
+    window.addEventListener('mouseup', onUp, { passive: true });
 
     const tick = () => {
       this.pos.x += (this.pos.tx - this.pos.x) * 0.22;

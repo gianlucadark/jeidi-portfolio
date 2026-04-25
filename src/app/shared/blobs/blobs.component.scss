@@ -4,6 +4,7 @@
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
+  contain: strict;
 }
 .blob-full {
   position: absolute;
