@@ -69,6 +69,7 @@
             @for (project of col; track project.id) {
               <button class="project-card"
                 data-hover="image"
+                [attr.aria-label]="project.title || 'Project ' + project.id"
                 (click)="nav.navigate(project.id)">
                 <app-reveal-image [src]="project.img" aspect="16/10"/>
               </button>

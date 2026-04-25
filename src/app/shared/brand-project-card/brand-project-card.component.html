@@ -1,5 +1,5 @@
 <div class="card-wrapper" [class.visible]="visible()">
-  <button class="card-btn" data-hover="image" (click)="clicked.emit()">
+  <button class="card-btn" [attr.aria-label]="project().title" data-hover="image" (click)="clicked.emit()">
     <div class="card-image" [style.background-image]="'url(' + project().img + ')'"></div>
     <div class="card-info">
       <div class="card-title">{{ project().title }}</div>

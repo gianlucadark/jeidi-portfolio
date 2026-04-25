@@ -1,4 +1,5 @@
 <button class="circle-arrow" data-hover="circle"
+  [attr.aria-label]="ariaLabel()"
   [style.border-color]="borderColor()"
   (click)="clicked.emit()">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none"

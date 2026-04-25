@@ -10,6 +10,7 @@ export type ArrowDirection = 'down' | 'up' | 'left' | 'right';
 })
 export class CircleArrowComponent {
   direction = input<ArrowDirection>('down');
+  ariaLabel = input('Scroll arrow');
   borderColor = input('var(--ink)');
   iconColor = input('');
   clicked = output();
