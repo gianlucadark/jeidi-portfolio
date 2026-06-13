@@ -20,6 +20,8 @@ const ROW_ASPECTS: Record<string, string> = {
 export class ProjectGridComponent {
   images = input<string[]>([]);
   layout = input<string[]>([]);
+  // Optional per-image aspect ratios; overrides the span-derived default when set.
+  aspects = input<string[]>([]);
 
   span(i: number): string {
     const l = this.layout();
@@ -27,6 +29,6 @@ export class ProjectGridComponent {
   }
 
   rowAspect(i: number): string {
-    return ROW_ASPECTS[this.span(i)] ?? '4/3';
+    return this.aspects()[i] ?? ROW_ASPECTS[this.span(i)] ?? '4/3';
   }
 }

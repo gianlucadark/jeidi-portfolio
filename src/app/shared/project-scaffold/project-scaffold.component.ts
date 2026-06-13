@@ -18,11 +18,13 @@ export class ProjectScaffoldComponent {
   // Translation key prefix — pass e.g. "project.ada" and the scaffold resolves .subtitle, .body, .tagline
   projectKey = input('');
 
-  title    = input('');
-  hero     = input('');
-  grid     = input<string[]>([]);
-  layout   = input<string[]>([]);
-  credits  = input<string[]>([]);
+  title      = input('');
+  hero       = input('');
+  heroAspect = input('1647/824');
+  grid       = input<string[]>([]);
+  layout     = input<string[]>([]);
+  aspects    = input<string[]>([]);
+  credits    = input<string[]>([]);
 
   mouseService = inject(MouseService);
   nav          = inject(NavigationService);

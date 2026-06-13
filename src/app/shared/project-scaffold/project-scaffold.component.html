@@ -9,13 +9,13 @@
         }
       </div>
       @if (hero()) {
-        <app-reveal-image [src]="hero()" aspect="1647/824"/>
+        <app-reveal-image [src]="hero()" [aspect]="heroAspect()"/>
       }
       <div class="project-info">
         <h2 class="subtitle">{{ subtitle() }}</h2>
         <p class="body-text">{{ body() }}</p>
       </div>
-      <app-project-grid [images]="grid()" [layout]="layout()"/>
+      <app-project-grid [images]="grid()" [layout]="layout()" [aspects]="aspects()"/>
       @if (credits().length) {
         <div class="credits">
           <p class="credits-label">{{ creditsLabel() }}</p>

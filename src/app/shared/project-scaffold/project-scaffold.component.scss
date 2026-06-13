@@ -20,12 +20,14 @@
 .subtitle {
   font-family: Lato; font-weight: 250;
   font-size: min(6.7vw, 128px); line-height: 1.05;
-  color: var(--ink); margin: 0; text-align: center;
+  color: var(--ink); margin: 0 auto; width: 100%; max-width: 1078px;
+  text-align: left;
 }
 .body-text {
   font-family: Lato; font-weight: 300;
   font-size: min(1.66vw, 32px); line-height: 1.19;
-  color: var(--ink); margin: 0 auto; max-width: 1078px; text-align: center;
+  color: var(--ink); margin: 0 auto; max-width: 1078px; text-align: left;
+  white-space: pre-line; /* honor explicit \n\n paragraph breaks in translations */
 }
 .credits {
   font-family: Lato; font-weight: 300;

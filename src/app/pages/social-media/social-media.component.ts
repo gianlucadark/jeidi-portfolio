@@ -9,7 +9,7 @@ import { LangService } from '../../services/lang.service';
 
 const PROJECTS_BASE = [
   { id: 'perlei',    title: 'Perlei - Gioielli artigianali', descKey: 'social.perlei.desc', img: 'perlei-3.webp' },
-  { id: 'circus-sm', title: 'CIRCUS Magazine',               descKey: 'social.circus.desc', img: 'circus-1.webp' },
+  { id: 'circus-sm', title: 'CIRCUS Magazine',               descKey: 'social.circus.desc', img: 'circus-sm-v.webp' },
   { id: 'riga-sm',   title: 'Riga, the shape of tomorrow.',  descKey: 'social.riga.desc',   img: 'riga-2.webp' },
 ];
 
