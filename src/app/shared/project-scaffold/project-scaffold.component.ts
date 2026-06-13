@@ -35,3 +35,4 @@ export class ProjectScaffoldComponent {
   body     = computed(() => this.langService.t(`${this.projectKey()}.body`));
   creditsLabel = computed(() => this.langService.t('credits.label'));
 }
+  
