@@ -1,7 +1,7 @@
 <div class="page">
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <app-corner-logo/>
-  <section class="contact-section">
+  <section class="contact-section snap-section">
     <div class="contact-grid">
       @for (item of contacts; track item.type) {
         <a [href]="item.href" class="contact-item" data-hover="circle" target="_blank">

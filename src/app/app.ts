@@ -1,6 +1,5 @@
-import { Component, OnInit, inject, signal, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd, Event } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs';
 import { NavComponent } from './shared/nav/nav.component';
 import { MobileNavComponent } from './shared/mobile-nav/mobile-nav.component';
@@ -8,6 +7,7 @@ import { CursorComponent } from './shared/cursor/cursor.component';
 import { PageTransitionComponent } from './shared/page-transition/page-transition.component';
 import { NavigationService } from './services/navigation.service';
 import { MouseService } from './services/mouse.service';
+import { SnapScrollService } from './services/snap-scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -19,68 +19,18 @@ import { MouseService } from './services/mouse.service';
 export class App implements OnInit {
   navService = inject(NavigationService);
   private mouseService = inject(MouseService);
+  private snapScroll = inject(SnapScrollService);
   private router = inject(Router);
-  private platformId = inject(PLATFORM_ID);
 
   navColor = signal('var(--ink)');
 
   ngOnInit(): void {
     this.mouseService.init();
-    this.initSmoothScroll();
+    this.snapScroll.init();
     this.router.events.pipe(
       filter((e: Event): e is NavigationEnd => e instanceof NavigationEnd)
     ).subscribe((e: NavigationEnd) => {
       this.navColor.set(e.urlAfterRedirects === '/photo' ? 'var(--white)' : 'var(--ink)');
-    });
-  }
-
-  private initSmoothScroll(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
-    if (matchMedia('(pointer: coarse)').matches) return;
-
-    let targetScroll = 0;
-    let currentScroll = 0;
-    let ticking = false;
-    const EASE = 0.085;
-
-    const tick = () => {
-      const diff = targetScroll - currentScroll;
-      if (Math.abs(diff) > 0.5) {
-        currentScroll += diff * EASE;
-        window.scrollTo(0, currentScroll);
-        requestAnimationFrame(tick);
-      } else {
-        ticking = false;
-      }
-    };
-
-    const startTicking = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(tick);
-      }
-    };
-
-    const onWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      if (Math.abs(window.scrollY - currentScroll) > 10) {
-        currentScroll = window.scrollY;
-        targetScroll = window.scrollY;
-      }
-      targetScroll = Math.max(0, Math.min(
-        document.documentElement.scrollHeight - window.innerHeight,
-        targetScroll + e.deltaY
-      ));
-      startTicking();
-    };
-
-    window.addEventListener('wheel', onWheel, { passive: false });
-
-    this.router.events.pipe(
-      filter((e: Event): e is NavigationEnd => e instanceof NavigationEnd)
-    ).subscribe(() => {
-      targetScroll = 0;
-      currentScroll = 0;
     });
   }
 }

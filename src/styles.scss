@@ -19,9 +19,25 @@ html, body {
   color: var(--ink);
 }
 
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: auto;
+  scroll-snap-type: y mandatory;
+}
+
+html.scroll-snap-animating {
+  scroll-snap-type: none;
+}
 
 body { overflow-x: hidden; }
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+app-footer.snap-section {
+  display: block;
+}
 
 * { box-sizing: border-box; }
 

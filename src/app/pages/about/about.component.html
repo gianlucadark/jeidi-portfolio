@@ -1,16 +1,16 @@
 <div class="page">
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <app-corner-logo/>
-  <section class="bio-section">
+  <section class="bio-section snap-section">
     <h1 class="big-title" [innerHTML]="langService.t('about.title')"></h1>
     <p class="bio-text">{{ langService.t('about.bio1') }}</p>
     <p class="bio-text">{{ langService.t('about.bio2') }}</p>
     <p class="bio-text">{{ langService.t('about.bio3') }}</p>
   </section>
-  <section class="philosophy-section">
+  <section class="philosophy-section snap-section">
     <h2 class="philosophy-title">
       {{ langService.t('about.philosophy') }}
     </h2>
   </section>
-  <app-footer/>
+  <app-footer class="snap-section"/>
 </div>

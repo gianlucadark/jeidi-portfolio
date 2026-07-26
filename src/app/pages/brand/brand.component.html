@@ -1,7 +1,7 @@
 ﻿<div class="page">
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <app-corner-logo/>
-  <section class="section">
+  <section class="section snap-section">
     <div class="inner">
       @for (p of projects(); track p.id) {
         <app-brand-project-card
@@ -10,7 +10,7 @@
       }
     </div>
   </section>
-  <div class="sub-panels">
+  <div class="sub-panels snap-section">
     <button class="sub-panel" data-hover="image"
       style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(brand-uxui.webp)"
       (click)="nav.navigate('uxui')">
@@ -22,5 +22,5 @@
       <span>{{ langService.t('panel.social') }}</span>
     </button>
   </div>
-  <app-footer/>
+  <app-footer class="snap-section"/>
 </div>

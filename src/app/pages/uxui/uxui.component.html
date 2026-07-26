@@ -1,7 +1,7 @@
 ﻿<div class="page">
   <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
   <app-corner-logo/>
-  <section class="section">
+  <section class="section snap-section">
     <div class="inner">
       <h1 class="page-title">UX/UI Design</h1>
       @for (p of projects(); track p.id) {
@@ -9,7 +9,7 @@
       }
     </div>
   </section>
-  <div class="sub-panels">
+  <div class="sub-panels snap-section">
     <button class="sub-panel" data-hover="image"
       style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(ideate-5.webp)"
       (click)="nav.navigate('brand')">
@@ -21,5 +21,5 @@
       <span>{{ langService.t('panel.social') }}</span>
     </button>
   </div>
-  <app-footer/>
+  <app-footer class="snap-section"/>
 </div>

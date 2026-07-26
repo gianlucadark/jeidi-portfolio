@@ -2,7 +2,7 @@
   <app-corner-logo/>
 
   <!-- Hero -->
-  <div class="hero">
+  <div class="hero snap-section">
     <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
     <!-- <app-logo [size]="74" class="hero-logo hide-mobile"/> -->
     <div class="hero-content">
@@ -31,7 +31,7 @@
   </div>
 
   <!-- Services -->
-  <section class="services-section">
+  <section class="services-section snap-section">
     <div class="services-inner">
       <h2 class="services-title">SERVICE</h2>
       <p class="services-subtitle">{{ langService.t('home.services.subtitle') }}</p>
@@ -58,7 +58,7 @@
   </section>
 
   <!-- Selected Work -->
-  <section class="work-section">
+  <section class="work-section snap-section">
     <div class="work-inner">
       <div class="section-title">
         {{ langService.t('home.highlight') }}
@@ -80,5 +80,5 @@
     </div>
   </section>
 
-  <app-footer/>
+  <app-footer class="snap-section"/>
 </div>

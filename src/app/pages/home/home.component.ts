@@ -9,6 +9,7 @@ import { MouseService } from '../../services/mouse.service';
 import { NavigationService } from '../../services/navigation.service';
 import { LangService } from '../../services/lang.service';
 import { CornerLogoComponent } from '../../shared/corner-logo/corner-logo.component';
+import { SnapScrollService } from '../../services/snap-scroll.service';
 
 const PROJECTS = [
   { id: 'regiro', title: 'regiro',           kind: 'Brand identity',       img: 'regiro-1.webp' },
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
   mouseService = inject(MouseService);
   nav = inject(NavigationService);
   langService = inject(LangService);
+  private snapScroll = inject(SnapScrollService);
   private platformId = inject(PLATFORM_ID);
 
   mounted = signal(false);
@@ -55,12 +57,6 @@ export class HomeComponent implements OnInit {
   }
 
   scrollTo(selector: string): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const el = document.querySelector(selector);
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    }
+    this.snapScroll.scrollTo(selector);
   }
 }
