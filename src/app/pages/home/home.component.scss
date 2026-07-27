@@ -23,7 +23,12 @@
 .big-title {
   font-family: Lato, system-ui;
   font-weight: 100;
-  font-size: min(9vw, 140px);
+  /*
+   * The title shares the viewport with the large left offset below.
+   * Scaling it from the full viewport width (9vw) made the two together
+   * wider than common 15–16" desktop viewports.
+   */
+  font-size: min(7vw, 140px);
   line-height: 1;
   letter-spacing: -0.01em;
   color: var(--black);
