@@ -46,6 +46,8 @@ const TR: Record<Lang, Record<string, string>> = {
     'uxui.regiro.desc': "Un'app che trasforma la città in storie.",
     'uxui.circus.desc': "Una rivista cartacea e digitale che esplora la società moderna.",
     'uxui.ia.desc': "Un information design che affronta l'impatto dell'IA nella società.",
+    'uxui.sensis.desc': "Un'app per un dispositivo wearable che monitora gli allergeni nell'ambiente.",
+    'uxui.mediterranei.desc': "Il redesign del sito web di una cooperativa digitale.",
 
     // Social media listing descriptions
     'social.perlei.desc': "Un rebranding nella comunicazione social per un brand di gioielli.",
@@ -83,6 +85,19 @@ const TR: Record<Lang, Record<string, string>> = {
     // Project: ideate
     'project.ideate.subtitle': 'Creative studio',
     'project.ideate.body': "Il logo design per Ideate Creative Studio mira a esprimere un'identità creativa, accogliente e professionale. Le linee morbide del marchio riflettono un approccio amichevole e dinamico. Lo studio si distingue come un laboratorio di idee capace di offrire servizi di qualità, dalla grafica alla fotografia, fino alle campagne pubblicitarie e ai contenuti multimediali.",
+
+    // Project: sensis
+    'project.sensis.tagline': 'La tua salute al sicuro',
+    'project.sensis.subtitle': 'App support',
+    'project.sensis.body': "Sensis è un progetto di wearable technology in ambito healthcare, pensato per monitorare la presenza di allergeni e sostanze potenzialmente nocive nell'ambiente circostante. L'app accompagna il dispositivo wearable, permettendo agli utenti di configurarlo, monitorare le rilevazioni, ricevere notifiche in caso di potenziale esposizione e consultare lo storico dei dati. L'esperienza UX/UI è progettata per rendere informazioni ambientali complesse accessibili e comprensibili, attraverso una dashboard intuitiva, una navigazione semplice e strumenti di personalizzazione e condivisione familiare.",
+    'project.sensis.credits.ui': 'UI design:',
+    'project.sensis.credits.collab': 'Progetto di Wearable Technology realizzato in collaborazione con:',
+
+    // Project: mediterranei
+    'project.mediterranei.tagline': 'Cooperativa',
+    'project.mediterranei.subtitle': 'Website redesign',
+    'project.mediterranei.body': "Il progetto nasce dall’esigenza di ripensare la presenza digitale di Mediterranei, attraverso un sito capace di comunicare in modo chiaro e completo l’identità della cooperativa e i suoi servizi. Il sito attuale, infatti, privilegia l’aspetto visivo tridimensionale della homepage, lasciando in secondo piano informazioni fondamentali e la varietà delle competenze offerte.\n\nIl redesign si concentra quindi su una nuova architettura dei contenuti, riorganizzando e strutturando i servizi per renderli più accessibili, comprensibili e facilmente navigabili. Il percorso di comunicazione parte dalla presentazione della cooperativa, della sua missione e del suo pubblico, per poi approfondire le diverse aree di intervento.\n\nA livello stilistico, il progetto mantiene i colori e gli elementi distintivi dell’identità esistente, reinterpretandoli attraverso un linguaggio grafico più contemporaneo, dinamico e innovativo, in linea con il settore tecnologico.",
+    'project.mediterranei.note': 'Progetto svolto durante lo stage presso Mediterranei Cooperativa come visual designer.',
 
     // Project: circus-sm
     'project.circus-sm.tagline': "Un'analisi sulla contemporaneità attraverso l'editoria cartacea e digitale",
@@ -137,6 +152,8 @@ const TR: Record<Lang, Record<string, string>> = {
     'uxui.regiro.desc': "A walking-tour app that turns the city into stories.",
     'uxui.circus.desc': "A print and digital magazine that explores modern society.",
     'uxui.ia.desc': "An information design that tackles the impact of AI in society.",
+    'uxui.sensis.desc': "An app for a wearable device that monitors allergens in the environment.",
+    'uxui.mediterranei.desc': "The website redesign of a digital cooperative.",
 
     // Social media listing descriptions
     'social.perlei.desc': "A rebranding in social communication for a jewelry brand.",
@@ -175,6 +192,19 @@ const TR: Record<Lang, Record<string, string>> = {
     'project.ideate.tagline': 'Creative studio',
     'project.ideate.subtitle': 'Creative studio',
     'project.ideate.body': "The logo design for Ideate Creative Studio aims to express a creative, welcoming, and professional identity. The soft lines of the brand reflect a friendly and dynamic approach. The studio stands out as an ideas laboratory capable of delivering quality services, from graphic design to photography, advertising campaigns, and multimedia content.",
+
+    // Project: sensis
+    'project.sensis.tagline': 'Your health, kept safe',
+    'project.sensis.subtitle': 'App support',
+    'project.sensis.body': "Sensis is a wearable technology project in the healthcare field, designed to monitor the presence of allergens and potentially harmful substances in the surrounding environment. The app works alongside the wearable device, allowing users to set it up, track readings, receive notifications in case of potential exposure, and review their data history. The UX/UI experience is designed to make complex environmental information accessible and understandable, through an intuitive dashboard, simple navigation, and tools for personalization and family sharing.",
+    'project.sensis.credits.ui': 'UI design:',
+    'project.sensis.credits.collab': 'Wearable Technology project made in collaboration with:',
+
+    // Project: mediterranei
+    'project.mediterranei.tagline': 'Cooperative',
+    'project.mediterranei.subtitle': 'Website redesign',
+    'project.mediterranei.body': "The project stems from the need to rethink Mediterranei's digital presence, through a website able to communicate the cooperative's identity and services clearly and completely. The current site, in fact, favors the three-dimensional visual impact of the homepage, leaving essential information and the variety of its expertise in the background.\n\nThe redesign therefore focuses on a new content architecture, reorganizing and structuring the services to make them more accessible, understandable, and easy to navigate. The communication path starts from the presentation of the cooperative, its mission, and its audience, and then explores its different areas of work.\n\nStylistically, the project keeps the colors and distinctive elements of the existing identity, reinterpreting them through a more contemporary, dynamic, and innovative graphic language, in line with the technology sector.",
+    'project.mediterranei.note': 'Project carried out during my internship at Mediterranei Cooperativa as a visual designer.',
 
     // Project: circus-sm
     'project.circus-sm.tagline': "An analysis of contemporary society through print and digital publishing",

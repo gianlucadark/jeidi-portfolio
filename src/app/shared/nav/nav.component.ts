@@ -27,7 +27,7 @@ export class NavComponent {
   private readonly designSubRoutes = [
     '/brand', '/uxui', '/socialmedia',
     '/ada', '/ideate', '/riga',
-    '/regiro', '/circus', '/ia',
+    '/regiro', '/circus', '/ia', '/sensis', '/mediterranei',
     '/perlei', '/circus-sm', '/riga-sm',
   ];
 

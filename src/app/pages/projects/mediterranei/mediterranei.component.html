@@ -1,0 +1,35 @@
+<div class="page">
+  <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+  <section class="section snap-section">
+    <div class="inner">
+      <div class="title-block">
+        <h1 class="page-title">mediterranei</h1>
+        <p class="tagline">{{ t('project.mediterranei.tagline') }}</p>
+      </div>
+      <app-reveal-image src="mediterranei-1.webp" aspect="1647/971"/>
+      <div class="project-info">
+        <h2 class="subtitle">{{ t('project.mediterranei.subtitle') }}</h2>
+        <p class="body-text">{{ t('project.mediterranei.body') }}</p>
+      </div>
+      <div class="img-section">
+        <app-reveal-image src="mediterranei-2.webp" aspect="1647/926"/>
+        <div class="two-col">
+          <div class="col col-left">
+            <div class="col-stack">
+              <app-reveal-image src="mediterranei-3.webp" aspect="1037/633"/>
+              <app-reveal-image src="mediterranei-4.webp" aspect="1037/1181"/>
+            </div>
+            <p class="credits note">{{ t('project.mediterranei.note') }}</p>
+          </div>
+          <div class="col col-right">
+            <div class="col-stack">
+              <app-reveal-image src="mediterranei-5.webp" aspect="580/1693"/>
+              <app-reveal-image src="mediterranei-6.webp" aspect="580/438"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer class="snap-section"/>
+</div>

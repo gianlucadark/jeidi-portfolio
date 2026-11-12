@@ -1,0 +1,31 @@
+<div class="page">
+  <app-blobs mode="hero" [mouse]="mouseService.mouse()"/>
+  <section class="section snap-section">
+    <div class="inner">
+      <div class="title-block">
+        <h1 class="page-title">sensis</h1>
+        <p class="tagline">{{ t('project.sensis.tagline') }}</p>
+      </div>
+      <app-reveal-image src="sensis-1.webp" aspect="1647/971"/>
+      <div class="project-info">
+        <h2 class="subtitle">{{ t('project.sensis.subtitle') }}</h2>
+        <p class="body-text">{{ t('project.sensis.body') }}</p>
+      </div>
+      <div class="img-stack">
+        <app-reveal-image src="sensis-2.webp" aspect="1647/828"/>
+        <app-reveal-image src="sensis-3.webp" aspect="1647/1181"/>
+      </div>
+      <app-reveal-image src="sensis-4.webp" aspect="1647/721"/>
+      <div class="credits">
+        <p class="credits-label">{{ t('project.sensis.credits.ui') }}</p>
+        <ul><li>Jeidi Clemente</li></ul>
+        <p class="credits-label">{{ t('project.sensis.credits.collab') }}</p>
+        <ul>
+          <li>Silvia Panacchia</li>
+          <li>Mattia Tancredi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <app-footer class="snap-section"/>
+</div>

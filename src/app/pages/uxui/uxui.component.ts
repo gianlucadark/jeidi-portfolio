@@ -8,6 +8,8 @@ import { NavigationService } from '../../services/navigation.service';
 import { LangService } from '../../services/lang.service';
 
 const PROJECTS_BASE = [
+  { id: 'sensis',       title: 'Sensis',       descKey: 'uxui.sensis.desc',       img: 'sensis-1.webp' },
+  { id: 'mediterranei', title: 'Mediterranei', descKey: 'uxui.mediterranei.desc', img: 'mediterranei-1.webp' },
   { id: 'regiro', title: 'Regiro',                                        descKey: 'uxui.regiro.desc', img: 'regiro-1.webp' },
   { id: 'circus', title: 'CIRCUS Magazine',                               descKey: 'uxui.circus.desc', img: 'circus-4.webp' },
   { id: 'ia',     title: "L'Intelligenza artificiale e la società moderna", descKey: 'uxui.ia.desc',    img: 'ia-3fd2d896b0ee.webp' },

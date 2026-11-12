@@ -1,0 +1,20 @@
+.img-section { display: flex; flex-direction: column; gap: 50px; }
+
+/* Figma: 1037px + 30px gap + 580px = 1647px */
+.two-col { display: flex; gap: 30px; align-items: stretch; }
+.col { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-width: 0; }
+.col-left  { flex: 1037 1 0; }
+.col-right { flex: 580 1 0; }
+.col-stack { display: flex; flex-direction: column; gap: 20px; }
+
+.note { margin: 0; max-width: 914px; }
+
+@media (max-width: 900px) {
+  .img-section { gap: 20px; }
+  /* stack both columns; the note moves after all images */
+  .two-col { flex-direction: column; gap: 20px; }
+  .col-left, .col-right { display: contents; }
+  .col-left .col-stack  { order: 0; }
+  .col-right .col-stack { order: 1; }
+  .note { order: 2; }
+}

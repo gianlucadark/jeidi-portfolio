@@ -1,0 +1,6 @@
+.img-stack { display: flex; flex-direction: column; gap: 30px; }
+.credits .credits-label:not(:first-child) { margin-top: 12px; }
+
+@media (max-width: 900px) {
+  .img-stack { gap: 20px; }
+}
